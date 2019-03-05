@@ -5,6 +5,45 @@ using UnityEngine;
 public class Camera_Control : MonoBehaviour
 {
 
+    public Camera FPSCamera;
+
+    public float horizontalSpeed;
+    public float verticalSpeed;
+
+    float h;
+    float v;
+
+    void Start()
+    {
+        
+    }
+
+
+    private void Update()
+    {
+        h = horizontalSpeed * Input.GetAxis("Mouse X");
+        v = verticalSpeed * Input.GetAxis("Mouse Y");
+
+        transform.Rotate(0, h, 0);
+        FPSCamera.transform.Rotate(-v, 0, 0);
+
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     public enum RotationAxis
     {
         MouseX = 1,
@@ -13,8 +52,8 @@ public class Camera_Control : MonoBehaviour
 
     public RotationAxis axes = RotationAxis.MouseX;
 
-    /*public float minimumVert = -45.0f;
-    public float maximumVert = 45.0f;*/
+    public float minimumVert = -45.0f;
+    public float maximumVert = 45.0f;
 
     public float sensHorizontal = 10.0f;
     public float sensVertical = 10.0f;
@@ -37,4 +76,6 @@ public class Camera_Control : MonoBehaviour
         }
 
     }
+
+    */
 }

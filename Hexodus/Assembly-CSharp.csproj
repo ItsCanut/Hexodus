@@ -76,7 +76,7 @@
     <Compile Include="Assets\Easy Weapons\Scripts\TimedObjectDestroyer.cs" />
     <Compile Include="Assets\Easy Weapons\Scripts\Weapon.cs" />
     <Compile Include="Assets\Easy Weapons\Scripts\WeaponSystem.cs" />
-    <Compile Include="Assets\FPS Camara\Camera_Control.cs" />
+    <Compile Include="Assets\Player\Camera_Control.cs" />
     <Reference Include="Cinemachine">
       <HintPath>C:/Users/carlo/OneDrive/Documentos/Hexodus/Hexodus/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>

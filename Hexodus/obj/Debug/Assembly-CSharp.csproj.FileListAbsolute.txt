@@ -1,0 +1,2 @@
+C:\Users\jcarr_04\Documents\GitHub\Hexodus\Hexodus\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\jcarr_04\Documents\GitHub\Hexodus\Hexodus\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

@@ -78,6 +78,7 @@
     <Compile Include="Assets\Easy Weapons\Scripts\WeaponSystem.cs" />
     <Compile Include="Assets\Player\Camera_Control.cs" />
     <Compile Include="Assets\Player\Copiar_Movimiento_Camara.cs" />
+    <Compile Include="Assets\Player\Movimiento_Player.cs" />
     <Reference Include="Cinemachine">
       <HintPath>C:/Users/carlo/OneDrive/Documentos/Hexodus/Hexodus/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>

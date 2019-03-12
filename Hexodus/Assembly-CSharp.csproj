@@ -65,13 +65,13 @@
      <Compile Include="Assets\Easy Weapons\Scripts\Sample\FirstPersonHeadBob.cs" />
      <Compile Include="Assets\Easy Weapons\Scripts\Sample\MouseRotator.cs" />
      <Compile Include="Assets\Easy Weapons\Scripts\SlowMotion.cs" />
-     <Compile Include="Assets\Easy Weapons\Scripts\Spawner.cs" />
      <Compile Include="Assets\Easy Weapons\Scripts\TimedObjectDestroyer.cs" />
      <Compile Include="Assets\Easy Weapons\Scripts\Weapon.cs" />
      <Compile Include="Assets\Easy Weapons\Scripts\WeaponSystem.cs" />
      <Compile Include="Assets\Player\Camera_Control.cs" />
      <Compile Include="Assets\Player\Copiar_Movimiento_Camara.cs" />
      <Compile Include="Assets\Player\Disparo.cs" />
+     <Compile Include="Assets\Player\Spawner.cs" />
      <Compile Include="Assets\Player\VidaIA.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
@@ -83,7 +83,6 @@
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\Target.cs" />
      <Compile Include="Assets\VidaP.cs" />
-     <None Include="Assets\NatureStarterKit2\info.txt" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
  <Reference Include="Cinemachine">
  <HintPath>C:/Users/jcarr/Documents/GitHub/Hexodus/Hexodus/Library/ScriptAssemblies/Cinemachine.dll</HintPath>

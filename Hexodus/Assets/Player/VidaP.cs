@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VidaP : MonoBehaviour
 {
-    int vida = 100;
+    public int vida = 100;
+    public GameObject vidahud;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +19,16 @@ public class VidaP : MonoBehaviour
   public void AplicarDano(int dano)
     {
         vida -= dano;
+
+        Text text = vidahud.GetComponent<Text>();
+
+       // int vida2 = Convert.ToInt16(text.ToString());
+
+       // vida2 = vida - dano;
+
+        text.text = vida.ToString();
+
+
 
         if (vida <=0)
         {

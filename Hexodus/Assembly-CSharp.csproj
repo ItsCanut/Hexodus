@@ -68,11 +68,18 @@
      <Compile Include="Assets\Easy Weapons\Scripts\TimedObjectDestroyer.cs" />
      <Compile Include="Assets\Easy Weapons\Scripts\Weapon.cs" />
      <Compile Include="Assets\Easy Weapons\Scripts\WeaponSystem.cs" />
+     <Compile Include="Assets\Enemigo\Punto.cs" />
+     <Compile Include="Assets\Enemigo\Robot.cs" />
      <Compile Include="Assets\Player\Camera_Control.cs" />
      <Compile Include="Assets\Player\Copiar_Movimiento_Camara.cs" />
      <Compile Include="Assets\Player\Disparo.cs" />
+     <Compile Include="Assets\Player\HUD\Minutes.cs" />
+     <Compile Include="Assets\Player\HUD\Seconds.cs" />
+     <Compile Include="Assets\Player\HUD\VidaHUD.cs" />
+     <Compile Include="Assets\Player\Movimiento_Player.cs" />
      <Compile Include="Assets\Player\Spawner.cs" />
      <Compile Include="Assets\Player\VidaIA.cs" />
+     <Compile Include="Assets\Player\VidaP.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -82,7 +89,6 @@
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\Target.cs" />
-     <Compile Include="Assets\VidaP.cs" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
  <Reference Include="Cinemachine">
  <HintPath>C:/Users/jcarr/Documents/GitHub/Hexodus/Hexodus/Library/ScriptAssemblies/Cinemachine.dll</HintPath>

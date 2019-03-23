@@ -1,59 +1,72 @@
-﻿/// <summary>
-/// Spawner.cs
-/// Author: MutantGopher
-/// This is a sample spawning script used to spawn the red cubes in the demo scene.
-/// </summary>
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using System;
+using Random = UnityEngine.Random;
+using System.Collections.Generic;
 
 public class Spawner : MonoBehaviour
 {
-	public GameObject prefabToSpawn;				// The prefab that should be spawned
-	public float spawnFrequency = 6.0f;				// The time (in seconds) between spawns
-	public bool spawnOnStart = false;				// Whether or not one instance of the prefab should be spawned on Start()
-	public bool move = true;						// Move this spawn spot around
-	public float moveAmount = 5.0f;					// The amount to move
-	public float turnAmount = 5.0f;					// The amount to turn
 
-	private float spawnTimer = 0.0f;
+    //GameObjects  
+    public GameObject Enemigo;
+    public int cuantosQuieroSpawnear;
+    public GameObject nRonda;
+    public GameObject nRestantes;
+    int ronda;
+    
 
-	// Use this for initialization
-	void Start()
-	{
-		if (spawnOnStart)
-		{
-			Spawn();
-		}
-	}
-	
-	// Update is called once per frame
-	void Update()
-	{
-		// Update the spawning timer
-		spawnTimer += Time.deltaTime;
 
-		// Spawn a prefab if the timer has reached spawnFrequency
-		if (spawnTimer >= spawnFrequency)
-		{
-			// First reset the spawn timer to 0
-			spawnTimer = 0.0f;
-			Spawn();
-		}
+    void Start()
+    {
+        //Enemigos que spawnean cuando iniciamos el juego.
+        for( int i = 0; i < cuantosQuieroSpawnear; i++)
+        {
+            spawnEnemy();
+        }
 
-		// Move and turn so that boxes don't keep spawning in the same spots
-		transform.Translate(0, 0, moveAmount);
-		transform.Rotate(0, turnAmount, 0);
-	}
+        cuantosQuieroSpawnear++;
+        Text text = nRonda.GetComponent<Text>();
+        ronda = Convert.ToInt16(nRonda) + 1;
+        text.text = ronda.ToString();
+    }
 
-	void Spawn()
-	{
-		// First check to see if the prefab hasn't been set
-		if (prefabToSpawn != null)
-		{
-			// Instantiate the prefab
-			Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
-		}
-	}
+    // Draws a cube to show where the spawn point is... Useful if you don't have a object that show the spawn point
+    void OnDrawGizmos()
+    {
+        // Sets the color to red
+        Gizmos.color = Color.red;
+        //draws a small cube at the location of the gam object that the script is attached to
+        Gizmos.DrawCube(transform.position, new Vector3(0.5f, 0.5f, 0.5f));
+    }
+
+    void Update()
+    {
+        int enemigosRestantes = GameObject.FindGameObjectsWithTag("Robot").Length;
+        if ( enemigosRestantes == 1)
+        {
+            for(int i = 0; i < cuantosQuieroSpawnear; i++)
+            {
+                spawnEnemy();
+            }
+            Text text = nRonda.GetComponent<Text>();
+            ronda = Convert.ToInt16(nRonda) + 1;
+            text.text = ronda.ToString();
+            
+            cuantosQuieroSpawnear++;
+            cuantosQuieroSpawnear++;           
+        }
+
+        Text restantes = nRestantes.GetComponent<Text>();
+
+        restantes.text = enemigosRestantes.ToString();
+
+    }
+    // spawns an enemy based on the enemy level that you selected
+    private void spawnEnemy()
+    {
+        Instantiate(Enemigo, transform.position, Quaternion.identity);
+    }
+
 }
 

@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Punto : MonoBehaviour
 {
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -22,4 +23,6 @@ public class Punto : MonoBehaviour
     {
         
     }
+
+
 }

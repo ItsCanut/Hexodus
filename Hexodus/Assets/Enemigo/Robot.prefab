@@ -159,13 +159,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Vida: 100
-  PuntoDisparo: {fileID: 0}
+  PuntoDisparo: {fileID: 1512137905252194267, guid: ae980719cfb5309498320afce11c6b8b,
+    type: 3}
   speed: 20
   Dano: 1
   range: 10
   efecto: {fileID: 0}
-  punto: {fileID: 0}
-  player: {fileID: 0}
+  punto: {fileID: 1512137905252194267, guid: ae980719cfb5309498320afce11c6b8b, type: 3}
+  player: {fileID: 138987068169597417, guid: 49525b1395c01b446994e22e92ca885a, type: 3}
   distanciaAtaque: 10
 --- !u!1 &7796198224433911768
 GameObject:

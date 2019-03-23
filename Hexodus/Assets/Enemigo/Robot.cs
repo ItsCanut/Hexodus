@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Robot : MonoBehaviour
 {
@@ -23,6 +25,8 @@ public class Robot : MonoBehaviour
     public float distanciaAtaque = 10f;
 
     private NavMeshAgent agente;
+
+    public GameObject vidaTorre;
 
     public enum EstadosRobot
     {
@@ -97,6 +101,21 @@ public class Robot : MonoBehaviour
             default:
                 break;
         }
+
+
+        if (Vector3.Distance(transform.position, punto.position) < 10f)
+        {
+            
+            Text text = vidaTorre.GetComponent<Text>();
+
+            int vida = Convert.ToInt16(text.ToString());
+
+            vida = vida - 50;
+
+            text.text = vida.ToString();
+            Destroy(this);
+            
+        }
     }
 
     
@@ -139,4 +158,5 @@ public class Robot : MonoBehaviour
         if (_estado == EstadosRobot.Ataque) Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, distanciaAtaque);
     }
+
 }

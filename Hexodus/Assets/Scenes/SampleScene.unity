@@ -870,6 +870,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c665f64068c0f6a4bb87340bf3fa53a1, type: 3}
+--- !u!1 &393619046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 530636771507437848, guid: f270ca746e0e65d458997da735020ab6,
+    type: 3}
+  m_PrefabInstance: {fileID: 907237907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &399357109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,10 +1419,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ac83bf5081fdf40ba980b4f58a0be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemigo: {fileID: 1037245338}
+  robot: {fileID: 1037245338}
   cuantosQuieroSpawnear: 2
   nRonda: {fileID: 2020529908}
-  nRestantes: {fileID: 0}
+  nRestantes: {fileID: 393619046}
 --- !u!4 &552649622
 Transform:
   m_ObjectHideFlags: 0

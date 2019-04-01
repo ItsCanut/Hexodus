@@ -9,25 +9,28 @@ using System.Threading;
 public class Spawner : MonoBehaviour
 {
 
-    //GameObjects  
+    //declaraciones  
     public GameObject robot;
     public int cuantosQuieroSpawnear;
     public GameObject nRonda;
     public GameObject nRestantes;
     int ronda;
-    float waveTimer = 2.0f;
+    float waveTimer = 5.0f;
     float timeTillWave = 0.0f;
-    int contR = 0;
+    int contWaves;
+    int cuantasWaves;
+    bool spawn;
 
     void Start()
     {
 
         //Enemigos que spawnean cuando iniciamos el juego.
-        spawnTimed(robot);
         ronda = 1;
+        contWaves = 0;
+        spawn = true;
+        cuantasWaves = 4;
 
         cuantosQuieroSpawnear++; // cada ronda spawnea un enemigo mas
-        contR++;
     }
 
     // Draws a cube to show where the spawn point is... Useful if you don't have a object that show the spawn point
@@ -42,30 +45,27 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         int enemigosRestantes = GameObject.FindGameObjectsWithTag("Robot").Length; // devuelve el numero de robots que hay en el mapa
-        Text text = nRonda.GetComponent<Text>(); ;
-        if (enemigosRestantes == 1) // siempre habrá uno, ya que es el que clonaremos en la función de spawn.
-                                    //Si hay más de uno significa que no has acabado con la oleada y por lo tanto no entrará en el if
-        {
-            //spawnEnemy(robot, cuantosQuieroSpawnear);
+        Text text = nRonda.GetComponent<Text>();
 
-            spawnTimed(robot);
-            contR++;
-            
-            // cuando solo quede un enemigo será cuando spawneen más y cuando se sumará una ronda más al marcador.           
-            cuantosQuieroSpawnear++;    // cada ronda spawneará un enemigo más.     
-        }
-
-        if (contR == 4)
+        
+        if( contWaves >= cuantasWaves && enemigosRestantes.Equals(1) )
         {
-            contR = 0;
             ronda++;
-            text.text = ronda.ToString();
+            contWaves = 0;
+            spawn = true;
+            cuantasWaves++;
+        }
+        
+        if( contWaves < cuantasWaves && spawn )
+        {
+            spawnTimed(robot);
         }
 
         Text restantes = nRestantes.GetComponent<Text>();
 
         //Para ponerlo en el marcador no contaremos a ese enemigo que clonamos.
         restantes.text = (enemigosRestantes - 1).ToString();
+        text.text = ronda.ToString();
 
     }
 
@@ -84,9 +84,10 @@ public class Spawner : MonoBehaviour
         if (timeTillWave >= waveTimer)
         {
             spawnEnemy(robot, 5);
-            contR++;
+            contWaves++;
             timeTillWave = 0.0f;
         }
+
     }
 }
 

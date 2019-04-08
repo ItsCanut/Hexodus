@@ -67,7 +67,7 @@ public class Robot : MonoBehaviour
             case EstadosRobot.Patrulla:
 
                
-                agente.destination = punto.position;
+                
                 agente.speed = 4f;
                 //Debug.Log("MODO PATRULLA");
                 efecto.active = false;
@@ -81,7 +81,7 @@ public class Robot : MonoBehaviour
 
             case EstadosRobot.Ataque:
 
-                agente.destination = punto.position;
+                
                 agente.speed = 2f;
                 if (Vector3.Distance(transform.position, player.position) > distanciaAtaque)
                 {

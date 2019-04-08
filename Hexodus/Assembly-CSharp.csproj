@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Escenario\Cursorhide.cs" />
     <Compile Include="Assets\Escenario\Enemigo\Punto.cs" />
     <Compile Include="Assets\Escenario\Enemigo\Robot.cs" />
     <Compile Include="Assets\Escenario\Suelo\Fuente\aniFuente.cs" />

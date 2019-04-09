@@ -20,6 +20,8 @@ public class Robot : MonoBehaviour
 
     public Transform player;
 
+    public Transform cabeza;
+
     public float distanciaAtaque = 10f;
 
     private NavMeshAgent agente;
@@ -89,7 +91,7 @@ public class Robot : MonoBehaviour
                 }
                 //Aqui se pone para que dispare al jugador
                 Debug.Log("MODO ATAQUE");
-                transform.LookAt(player);
+                cabeza.transform.LookAt(player);
                 Shoot();
                 
                 break;

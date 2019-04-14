@@ -20,8 +20,6 @@ public class Robot : MonoBehaviour
 
     public Transform player;
 
-    GameObject objetivo;
-
     public Transform cabeza;
 
     public float distanciaAtaque = 10f;
@@ -48,7 +46,6 @@ public class Robot : MonoBehaviour
             if (_estado == EstadosRobot.Patrulla)
             {
                 agente.destination = punto.position;
-
             }
 
         }
@@ -61,7 +58,7 @@ public class Robot : MonoBehaviour
         agente = GetComponent<NavMeshAgent>();
         agente.destination = punto.position;
         agente.speed = 10f;
-        objetivo = GameObject.Find("Personaje_1");
+        
     }
 
     // Update is called once per frame
@@ -70,8 +67,9 @@ public class Robot : MonoBehaviour
         switch (Estado)
         {
             case EstadosRobot.Patrulla:
-                
-                agente.destination = punto.position;                
+
+               
+                agente.destination = punto.position;
                 agente.speed = 4f;
                 //Debug.Log("MODO PATRULLA");
                 efecto.active = false;
@@ -80,8 +78,7 @@ public class Robot : MonoBehaviour
                 if (Vector3.Distance(transform.position, player.position) < distanciaAtaque)
                 {
                     Estado = EstadosRobot.Ataque;
-                }                    
-                
+                }
                 break;
 
             case EstadosRobot.Ataque:
@@ -94,8 +91,7 @@ public class Robot : MonoBehaviour
                 }
                 //Aqui se pone para que dispare al jugador
                 Debug.Log("MODO ATAQUE");
-                Vector3 targetPosition = new Vector3(objetivo.transform.position.x, 90, objetivo.transform.position.z);
-                cabeza.transform.LookAt(targetPosition);
+                cabeza.transform.LookAt(player);
                 Shoot();
                 
                 break;

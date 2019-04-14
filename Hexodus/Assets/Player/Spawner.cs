@@ -20,6 +20,7 @@ public class Spawner : MonoBehaviour
     int contWaves;
     int cuantasWaves;
     bool spawn;
+    Text restantes;
 
     void Start()
     {
@@ -29,8 +30,9 @@ public class Spawner : MonoBehaviour
         contWaves = 0;
         spawn = true;
         cuantasWaves = 4;
-
+        restantes = nRestantes.GetComponent<Text>();
         cuantosQuieroSpawnear++; // cada ronda spawnea un enemigo mas
+        restantes.text = (cuantasWaves * 5).ToString();
     }
 
     // Draws a cube to show where the spawn point is... Useful if you don't have a object that show the spawn point
@@ -54,6 +56,7 @@ public class Spawner : MonoBehaviour
             contWaves = 0;
             spawn = true;
             cuantasWaves++;
+            restantes.text = (cuantasWaves * 5).ToString();
         }
         
         if( contWaves < cuantasWaves && spawn )
@@ -61,10 +64,6 @@ public class Spawner : MonoBehaviour
             spawnTimed(robot);
         }
 
-        Text restantes = nRestantes.GetComponent<Text>();
-
-        //Para ponerlo en el marcador no contaremos a ese enemigo que clonamos.
-        restantes.text = (enemigosRestantes - 1).ToString();
         text.text = ronda.ToString();
 
     }

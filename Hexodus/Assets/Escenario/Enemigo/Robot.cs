@@ -33,6 +33,12 @@ public class Robot : MonoBehaviour
     }
 
     private EstadosRobot _estado = EstadosRobot.Patrulla;
+    private GameObject gameObject;
+
+    public Robot(GameObject gameObject)
+    {
+        this.gameObject = gameObject;
+    }
 
     public EstadosRobot Estado
     {

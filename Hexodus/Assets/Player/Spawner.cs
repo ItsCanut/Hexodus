@@ -31,8 +31,6 @@ public class Spawner : MonoBehaviour
         spawn = true;
         cuantasWaves = 4;
         restantes = nRestantes.GetComponent<Text>();
-        cuantosQuieroSpawnear++; // cada ronda spawnea un enemigo mas
-        restantes.text = (cuantasWaves * 5).ToString();
     }
 
     // Draws a cube to show where the spawn point is... Useful if you don't have a object that show the spawn point
@@ -48,7 +46,7 @@ public class Spawner : MonoBehaviour
     {
         int enemigosRestantes = GameObject.FindGameObjectsWithTag("Enemigo").Length; // devuelve el numero de robots que hay en el mapa
         Text text = nRonda.GetComponent<Text>();
-
+        restantes.text = (enemigosRestantes - 1).ToString();
         
         if( contWaves >= cuantasWaves && enemigosRestantes.Equals(1) )
         {
@@ -56,7 +54,6 @@ public class Spawner : MonoBehaviour
             contWaves = 0;
             spawn = true;
             cuantasWaves++;
-            restantes.text = (cuantasWaves * 5).ToString();
         }
         
         if( contWaves < cuantasWaves && spawn )
@@ -82,7 +79,7 @@ public class Spawner : MonoBehaviour
         timeTillWave += Time.deltaTime;
         if (timeTillWave >= waveTimer)
         {
-            spawnEnemy(robot, 5);
+            spawnEnemy(robot, cuantosQuieroSpawnear);
             contWaves++;
             timeTillWave = 0.0f;
         }

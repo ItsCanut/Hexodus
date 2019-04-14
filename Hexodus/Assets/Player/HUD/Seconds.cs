@@ -30,14 +30,7 @@ public class Seconds : MonoBehaviour
             loSegundos -= 60;
         }
 
-        if( loSegundos < 10)
-        {
-            text.text = ":0" + loSegundos.ToString();
-        }
-        else
-        {
-            text.text = ":" + loSegundos.ToString();
-        }
+        text.text = ":" + loSegundos.ToString();
 
     }
 }

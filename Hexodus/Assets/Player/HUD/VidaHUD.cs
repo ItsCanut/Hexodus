@@ -7,8 +7,7 @@ using UnityEngine.UI;
 public class VidaHUD : MonoBehaviour
 {
 
-    public int vida;
-    public GameObject barraVida;
+    public GameObject vidahud;
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +23,13 @@ public class VidaHUD : MonoBehaviour
 
     public void CambiarVida(int dano)
     {
-        Scrollbar barra = barraVida.GetComponent<Scrollbar>();
+        Text text = vidahud.GetComponent<Text>();
+
+        int vida = Convert.ToInt16(text.ToString());
 
         vida = vida - dano;
 
-        barra.size = vida * (1/100000);
+        text.text = vida.ToString();
 
 
 

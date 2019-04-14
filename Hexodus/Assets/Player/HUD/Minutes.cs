@@ -25,16 +25,14 @@ public class Minutes : MonoBehaviour
         Text text = minutos.GetComponent<Text>();
         int losMinutos = total.Minutes;
         
-        if (losMinutos < 10)
+        if (losMinutos.Equals(0))
         {
-            text.text = "0" + losMinutos.ToString();
+            text.text = "";
         }
         else
         {
             text.text = losMinutos.ToString();
         }
-        
-        
 
     }
 }

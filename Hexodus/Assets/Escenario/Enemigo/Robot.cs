@@ -10,17 +10,18 @@ public class Robot : MonoBehaviour
     public Transform PuntoDisparo;
 
     //public Rigidbody projectile;
-    public float speed = 20f;
+    public int speed = 20;
     public int Dano = 10;
     public float range = 10f;
     //public AudioClip AudioDisparo;
     public GameObject efecto;
-
+    public float reloadTime = 2.5f;
     public Transform punto;
     public Transform posi;
     public Rigidbody bullet;
     public Transform player;
-
+    public float shootRate;
+    private float m_shootRateTimeStamp;
     public float distanciaAtaque = 10f;
 
     private NavMeshAgent agente;
@@ -57,6 +58,7 @@ public class Robot : MonoBehaviour
         agente = GetComponent<NavMeshAgent>();
         agente.destination = punto.position;
         agente.speed = 10f;
+
         
     }
 
@@ -131,10 +133,16 @@ public class Robot : MonoBehaviour
                   target.AplicarDaño(Dano);
               }
          }*/
-        var clone = Instantiate(bullet, posi.position, posi.rotation);
-        clone.velocity = transform.TransformDirection(new Vector3(0, 0,40 ));
+
+        if (Time.time > m_shootRateTimeStamp)
+        {
+            var clone = Instantiate(bullet, posi.position, posi.rotation);
+            clone.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
+            m_shootRateTimeStamp = Time.time + shootRate;
+        }
     }
-   
+  
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.green;

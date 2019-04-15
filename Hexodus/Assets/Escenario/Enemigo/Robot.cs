@@ -8,7 +8,6 @@ public class Robot : MonoBehaviour
     public int Vida = 100;
     //public Transform Objetivo;
     public Transform PuntoDisparo;
-
     //public Rigidbody projectile;
     public float speed = 20f;
     public int Dano = 10;
@@ -20,9 +19,13 @@ public class Robot : MonoBehaviour
 
     public Transform player;
 
+    public Transform Robotet;
+
     public float distanciaAtaque = 10f;
 
     private NavMeshAgent agente;
+
+    public Punto VidaTorre;
 
     public enum EstadosRobot
     {
@@ -52,11 +55,12 @@ public class Robot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BoxCollider Torre = punto.GetComponent<BoxCollider>();
         efecto.active = false;
         agente = GetComponent<NavMeshAgent>();
+        VidaTorre = GetComponent<Punto>();
         agente.destination = punto.position;
-        agente.speed = 10f;
-        
+        agente.speed = 10f;        
     }
 
     // Update is called once per frame
@@ -88,7 +92,7 @@ public class Robot : MonoBehaviour
                     Estado = EstadosRobot.Patrulla;
                 }
                 //Aqui se pone para que dispare al jugador
-                Debug.Log("MODO ATAQUE");
+                //Debug.Log("MODO ATAQUE");
                 transform.LookAt(player);
                 Shoot();
                 
@@ -97,9 +101,32 @@ public class Robot : MonoBehaviour
             default:
                 break;
         }
+        //
+
+        if (Vector3.Distance(transform.position, agente.destination) <= 3f)
+        {
+            Destroy(gameObject);
+            //Debug.Log("---Sa matao Paco---");
+            //VidaTorre.SendMessage("AplicarDañoTorre", 50, SendMessageOptions.DontRequireReceiver);
+            
+            
+            float dañoso = 50f;
+            Punto puntoTorre = punto.GetComponent<Punto>();
+            puntoTorre.AplicarDañoTorre(dañoso);
+        }
     }
 
-    
+    /*private void OnTriggerEnter(Collider otro)
+    {
+       // Debug.Log("Aqui entra por lo menos");
+        if (otro.gameObject.CompareTag("LaTorre"))
+        {
+            Debug.Log("Aqui entra por lo menos");
+            Destroy(this);
+            Debug.Log("---Sa matao Paco---");
+        }
+    }*/
+
     void FX()
     {
         efecto.active = false;

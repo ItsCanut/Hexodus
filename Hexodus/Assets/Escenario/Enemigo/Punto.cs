@@ -3,23 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Punto : MonoBehaviour
-{
+{    
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawCube(transform.position, Vector3.one * .3f);
-    }
-
+    public float VidaTorre = 1000f;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void AplicarDañoTorre(float amount)
     {
-        
+        VidaTorre -= amount;
+        Debug.Log("----ola q ase----");
+        if (VidaTorre <= 0f)
+        {
+            Debug.Log("Acabas de Palmar Prim");
+        }
     }
 }

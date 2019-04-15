@@ -17,7 +17,8 @@ public class Robot : MonoBehaviour
     public GameObject efecto;
 
     public Transform punto;
-
+    public Transform posi;
+    public Rigidbody bullet;
     public Transform player;
 
     public float distanciaAtaque = 10f;
@@ -106,31 +107,32 @@ public class Robot : MonoBehaviour
     }
     void Shoot()
     {
-        RaycastHit hit;
-        //transform.GetComponent<AudioSource>().PlayOneShot(AudioDisparo);
-        efecto.active = true;
-        Invoke("FX", 0.2f);
+        /* RaycastHit hit;
+         //transform.GetComponent<AudioSource>().PlayOneShot(AudioDisparo);
+         efecto.active = true;
+         Invoke("FX", 0.2f);
 
-        if (Physics.Raycast(PuntoDisparo.position, transform.TransformDirection(Vector3.forward), out hit, range))
-        {
-            Debug.Log("Estoy en el rango para darle al jugador");
+         if (Physics.Raycast(PuntoDisparo.position, transform.TransformDirection(Vector3.forward), out hit, range))
+         {
+             Debug.Log("Estoy en el rango para darle al jugador");
 
-            Debug.Log(hit.transform.name);
-            VidaP target = hit.transform.GetComponent<VidaP>();
-            if (target != null)
-            {
-
-                target.AplicarDano(Dano);
-            }
-            /* Debug.Log(hit.transform.name);
-             VidaIA target = hit.transform.GetComponent<VidaIA>();
+             Debug.Log(hit.transform.name);
+             VidaP target = hit.transform.GetComponent<VidaP>();
              if (target != null)
              {
 
-                 target.AplicarDaño(Dano);
-             }*/
-        }
+                 target.AplicarDano(Dano);
+             }
+              Debug.Log(hit.transform.name);
+              VidaIA target = hit.transform.GetComponent<VidaIA>();
+              if (target != null)
+              {
 
+                  target.AplicarDaño(Dano);
+              }
+         }*/
+        var clone = Instantiate(bullet, posi.position, posi.rotation);
+        clone.velocity = transform.TransformDirection(new Vector3(0, 0,40 ));
     }
    
     void OnDrawGizmos()

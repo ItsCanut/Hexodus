@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1469643936719367560
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100000, guid: d8c195ca0ca98284c812c4f82d1072f6, type: 3}
+      propertyPath: m_Name
+      value: cloud05
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d8c195ca0ca98284c812c4f82d1072f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d8c195ca0ca98284c812c4f82d1072f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 535.02704
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d8c195ca0ca98284c812c4f82d1072f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 550.6801
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d8c195ca0ca98284c812c4f82d1072f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 329.33978
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d8c195ca0ca98284c812c4f82d1072f6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.7656097
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d8c195ca0ca98284c812c4f82d1072f6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.6999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d8c195ca0ca98284c812c4f82d1072f6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.6999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d8c195ca0ca98284c812c4f82d1072f6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d8c195ca0ca98284c812c4f82d1072f6, type: 3}

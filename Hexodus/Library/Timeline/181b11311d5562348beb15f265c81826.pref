@@ -13,19 +13,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeInFrames: 0
-  timeAreaShownRange: {x: -0.13579477, y: 16.458326}
+  timeAreaShownRange: {x: -0.1606809, y: 14.55769}
   showAudioWaveform: 1
   trackHeight: 30
   trackScale: 1
   playRangeEnabled: 0
   timeAreaPlayRange: {x: 3.4028235e+38, y: 3.4028235e+38}
   windowTime: 0
-  verticalScroll: 0
+  verticalScroll: 7
   m_Keys:
   - {fileID: 114996195203353760, guid: 181b11311d5562348beb15f265c81826, type: 2}
-  - {fileID: 114661416756377770, guid: 181b11311d5562348beb15f265c81826, type: 2}
   - {fileID: 114703237518053250, guid: 181b11311d5562348beb15f265c81826, type: 2}
+  - {fileID: 114789462731088950, guid: 181b11311d5562348beb15f265c81826, type: 2}
+  - {fileID: 114882583750331158, guid: 181b11311d5562348beb15f265c81826, type: 2}
+  - {fileID: 114545980065170920, guid: 181b11311d5562348beb15f265c81826, type: 2}
+  - {fileID: 114770290089238536, guid: 181b11311d5562348beb15f265c81826, type: 2}
+  - {fileID: 114317184781192342, guid: 181b11311d5562348beb15f265c81826, type: 2}
+  - {fileID: 114324605731873142, guid: 181b11311d5562348beb15f265c81826, type: 2}
+  - {fileID: 114585579689948272, guid: 181b11311d5562348beb15f265c81826, type: 2}
+  - {fileID: 114811596137712788, guid: 181b11311d5562348beb15f265c81826, type: 2}
+  - {fileID: 114741348017443412, guid: 181b11311d5562348beb15f265c81826, type: 2}
   m_Vals:
+  - collapsed: 0
+    showInlineCurves: 0
+    inlineAnimationCurveHeight: 100
+  - collapsed: 0
+    showInlineCurves: 0
+    inlineAnimationCurveHeight: 100
+  - collapsed: 0
+    showInlineCurves: 0
+    inlineAnimationCurveHeight: 100
+  - collapsed: 0
+    showInlineCurves: 0
+    inlineAnimationCurveHeight: 100
+  - collapsed: 0
+    showInlineCurves: 0
+    inlineAnimationCurveHeight: 100
+  - collapsed: 0
+    showInlineCurves: 0
+    inlineAnimationCurveHeight: 100
+  - collapsed: 0
+    showInlineCurves: 0
+    inlineAnimationCurveHeight: 100
+  - collapsed: 0
+    showInlineCurves: 0
+    inlineAnimationCurveHeight: 100
   - collapsed: 0
     showInlineCurves: 0
     inlineAnimationCurveHeight: 100

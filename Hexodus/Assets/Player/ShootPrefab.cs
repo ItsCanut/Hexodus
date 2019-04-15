@@ -19,7 +19,7 @@ public class ShootPrefab : MonoBehaviour
             if (Time.time > m_shootRateTimeStamp)
             {
                 var clone = Instantiate(bullet, transform.position, transform.rotation);
-                clone.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
+                clone.velocity = transform.TransformDirection(new Vector3(0, speed,0 ));
                 m_shootRateTimeStamp = Time.time + shootRate;
             }
         }

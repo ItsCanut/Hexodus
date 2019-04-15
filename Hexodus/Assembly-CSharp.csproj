@@ -53,16 +53,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BulletHit.cs" />
      <Compile Include="Assets\Escenario\Enemigo\Punto.cs" />
      <Compile Include="Assets\Escenario\Enemigo\Robot.cs" />
      <Compile Include="Assets\Escenario\Suelo\Fuente\aniFuente.cs" />
-     <Compile Include="Assets\HabHit.cs" />
-     <Compile Include="Assets\Habilidades.cs" />
+     <Compile Include="Assets\Player\BulletHit.cs" />
      <Compile Include="Assets\Player\BulletIA.cs" />
      <Compile Include="Assets\Player\Camera_Control.cs" />
      <Compile Include="Assets\Player\Copiar_Movimiento_Camara.cs" />
      <Compile Include="Assets\Player\Disparo.cs" />
+     <Compile Include="Assets\Player\HabHit.cs" />
+     <Compile Include="Assets\Player\Habilidades.cs" />
      <Compile Include="Assets\Player\HUD\Minutes.cs" />
      <Compile Include="Assets\Player\HUD\Seconds.cs" />
      <Compile Include="Assets\Player\HUD\VidaHUD.cs" />

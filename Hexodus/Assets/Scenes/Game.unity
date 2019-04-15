@@ -1387,6 +1387,16 @@ PrefabInstance:
       propertyPath: cuantosQuieroSpawnear
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2616862553854634227, guid: 6deaf046313630a4aad7c652954adbae,
+        type: 3}
+      propertyPath: castillo
+      value: 
+      objectReference: {fileID: 146171494}
+    - target: {fileID: 2616862553854634227, guid: 6deaf046313630a4aad7c652954adbae,
+        type: 3}
+      propertyPath: castillo2
+      value: 
+      objectReference: {fileID: 2800000, guid: a057d8c9e28c05b4db6881af7f0252a6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6deaf046313630a4aad7c652954adbae, type: 3}
 --- !u!1001 &289989031

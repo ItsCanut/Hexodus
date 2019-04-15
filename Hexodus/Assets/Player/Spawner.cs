@@ -48,7 +48,7 @@ public class Spawner : MonoBehaviour
         Text text = nRonda.GetComponent<Text>();
         restantes.text = (enemigosRestantes - 2).ToString();
         
-        if( contWaves >= cuantasWaves && enemigosRestantes.Equals(1) )
+        if( contWaves >= cuantasWaves && enemigosRestantes.Equals(2) )
         {
             ronda++;
             contWaves = 0;

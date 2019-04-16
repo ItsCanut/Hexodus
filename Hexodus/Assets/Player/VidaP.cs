@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class VidaP : MonoBehaviour
 {
-    public float vida = 100f;
+    public float vida = 100;
     //public GameObject vidahud;
 
     public Scrollbar HealthBar;

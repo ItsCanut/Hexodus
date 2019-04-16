@@ -67,6 +67,7 @@ public class Robot : MonoBehaviour
     {
         efecto.active = false;
         agente = GetComponent<NavMeshAgent>();
+       
         agente.destination = punto.position;
         agente.speed = 10f;
         objetivo = GameObject.Find("Personaje_1");

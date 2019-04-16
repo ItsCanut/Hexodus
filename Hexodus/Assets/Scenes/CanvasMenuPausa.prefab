@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8423936948374797382}
   - component: {fileID: 5510707527028067882}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Texto_pausa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0

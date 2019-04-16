@@ -16,14 +16,14 @@ public class Punto : MonoBehaviour
     public Sprite cas3;
     public Sprite cas4;
 
-    void Update() 
+    void Update()
     {
         image = VidaCast.GetComponent<Image>();
     }
     public void AplicarDañoTorre(float amount)
     {
-       
-        
+
+
         VidaTorre -= amount;
         cont++;
 
@@ -32,19 +32,19 @@ public class Punto : MonoBehaviour
 
             Debug.Log("Hola1");
             image.sprite = cas1;
-            
+
         }
         if (cont == 2)
         {
             Debug.Log("Hola2");
             image.sprite = cas2;
-            
+
         }
         if (cont == 3)
         {
             Debug.Log("Hola3");
             image.sprite = cas3;
-           
+
         }
         if (cont == 4)
         {
@@ -54,8 +54,8 @@ public class Punto : MonoBehaviour
 
         if (VidaTorre <= 0f)
         {
-           
-                HealthBar.size = VidaTorre / 1000f;
+
+
         }
     }
 }

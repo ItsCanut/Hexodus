@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class VidaP : MonoBehaviour
 {
-    public int vida = 100;
-    public GameObject vidahud;
+    public float vida = 100f;
+    //public GameObject vidahud;
+
+    public Scrollbar HealthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -20,19 +22,21 @@ public class VidaP : MonoBehaviour
     {
         vida -= dano;
 
-        Text text = vidahud.GetComponent<Text>();
+        //Text text = vidahud.GetComponent<Text>();
 
        // int vida2 = Convert.ToInt16(text.ToString());
 
        // vida2 = vida - dano;
 
-        text.text = vida.ToString();
+        //text.text = vida.ToString();
+
+        HealthBar.size = vida / 100f;
 
 
-
-        if (vida <=0)
+        if (vida <=0f)
         {
             Destroy(gameObject);
+            
         }
 
     }  

@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     
-    public string mainMenuScene;
     public GameObject pauseMenu;
     public bool isPaused;
 
@@ -45,7 +44,7 @@ public class MenuController : MonoBehaviour
     public void ReturnToMain()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     

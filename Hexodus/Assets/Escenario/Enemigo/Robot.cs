@@ -112,6 +112,7 @@ public class Robot : MonoBehaviour
             default:
                 break;
         }
+
         // Cuando el enemigo llega al castillo
         if (Vector3.Distance(transform.position, agente.destination) <= 3f)
         {

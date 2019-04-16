@@ -65,7 +65,7 @@ public class Robot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        efecto.active = false;
+        
         agente = GetComponent<NavMeshAgent>();
         agente.destination = punto.position;
         agente.speed = 10f;
@@ -83,7 +83,7 @@ public class Robot : MonoBehaviour
                 agente.destination = punto.position;
                 agente.speed = 4f;
                 //Debug.Log("MODO PATRULLA");
-                efecto.active = false;
+                
 
 
                 if (Vector3.Distance(transform.position, player.position) < distanciaAtaque)
@@ -127,11 +127,10 @@ public class Robot : MonoBehaviour
 
     void FX()
     {
-        efecto.active = false;
     }
     void Shoot()
     {
-        RaycastHit hit;
+       
         //transform.GetComponent<AudioSource>().PlayOneShot(AudioDisparo);
        
         

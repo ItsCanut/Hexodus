@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class VidaP : MonoBehaviour
@@ -35,8 +36,8 @@ public class VidaP : MonoBehaviour
 
         if (vida <=0f)
         {
-            Destroy(gameObject);
-            
+            SceneManager.LoadScene("Start");
+
         }
 
     }  

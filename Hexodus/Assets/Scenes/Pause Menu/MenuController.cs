@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-
+    
     public string mainMenuScene;
     public GameObject pauseMenu;
     public bool isPaused;
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,8 @@ public class MenuController : MonoBehaviour
     public void ReturnToMain()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(mainMenuScene);
+        SceneManager.LoadScene(0);
     }
+
+    
 }

@@ -2442,16 +2442,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: isla3
       objectReference: {fileID: 0}
-    - target: {fileID: 2542183626252724757, guid: b87b533aa8bf56848be274477dc03cb9,
-        type: 3}
-      propertyPath: m_Name
-      value: isla4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2542183625475746457, guid: b87b533aa8bf56848be274477dc03cb9,
-        type: 3}
-      propertyPath: m_Name
-      value: Isla1
-      objectReference: {fileID: 0}
     - target: {fileID: 6265228689638964187, guid: b87b533aa8bf56848be274477dc03cb9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2506,6 +2496,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542183626252724757, guid: b87b533aa8bf56848be274477dc03cb9,
+        type: 3}
+      propertyPath: m_Name
+      value: isla4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542183625475746457, guid: b87b533aa8bf56848be274477dc03cb9,
+        type: 3}
+      propertyPath: m_Name
+      value: Isla1
       objectReference: {fileID: 0}
     - target: {fileID: 6456514693864571955, guid: b87b533aa8bf56848be274477dc03cb9,
         type: 3}

@@ -6,7 +6,7 @@ using UnityEngine;
 public class Movimiento_Player : MonoBehaviour
 {
 
-    public float velocidad = 7f;
+    public float velocidad = 0f;
 
     public float caminar = 4f;
 
@@ -25,6 +25,13 @@ public class Movimiento_Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         inFloor = true;
+        StartCoroutine(Tiempo());
+    }
+
+    IEnumerator Tiempo()
+    {
+        yield return new WaitForSeconds(2);
+        velocidad=11f;
     }
 
     // Update is called once per frame

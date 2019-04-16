@@ -8,10 +8,16 @@ public class MenuMuerte : MonoBehaviour
 
    
 
-    public void GotoMainScene()
+    void Update()
     {
-        SceneManager.LoadScene("Main_Menu");
+        if (Input.anyKey)
+        {
+            SceneManager.LoadScene("Main_Menu");
+        }
+        
     }
+        
+    
 
     
 }

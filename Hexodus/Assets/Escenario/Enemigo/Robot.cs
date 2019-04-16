@@ -84,6 +84,7 @@ public class Robot : MonoBehaviour
                 agente.destination = punto.position;
                 agente.speed = 4f;
                 //Debug.Log("MODO PATRULLA");
+                efecto.active = false;
                 
 
 
@@ -105,7 +106,7 @@ public class Robot : MonoBehaviour
                 //Aqui se pone para que dispare al jugador
                 Debug.Log("MODO ATAQUE");
                 Vector3 targetPosition = new Vector3(objetivo.transform.position.x, 90, objetivo.transform.position.z);
-                cabeza.transform.LookAt(targetPosition);
+                transform.LookAt(player);
                 Shoot();
 
                 break;
@@ -128,6 +129,7 @@ public class Robot : MonoBehaviour
 
     void FX()
     {
+        efecto.active = false;
     }
     void Shoot()
     {
@@ -137,6 +139,8 @@ public class Robot : MonoBehaviour
         
         if (Time.time > m_shootRateTimeStamp)
         {
+            efecto.active = true;
+            Invoke("FX",0.5f);
             var clone = Instantiate(bullet, posi.position, posi.rotation);
             clone.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
             m_shootRateTimeStamp = Time.time + shootRate;

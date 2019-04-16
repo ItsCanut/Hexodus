@@ -3642,7 +3642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164d87fa21265644cad4139bebfc3a4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 100
+  vida: 500
   HealthBar: {fileID: 2050003225}
 --- !u!95 &969296743
 Animator:
@@ -6638,6 +6638,11 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6254878554796481645, guid: 8b46921067579d0459a1753fbf57845b,
+        type: 3}
+      propertyPath: efecto
+      value: 
+      objectReference: {fileID: 635840409}
     m_RemovedComponents:
     - {fileID: 412025609, guid: 8b46921067579d0459a1753fbf57845b, type: 3}
     - {fileID: 0}

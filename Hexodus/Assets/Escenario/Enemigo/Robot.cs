@@ -17,16 +17,24 @@ public class Robot : MonoBehaviour
     public GameObject efecto;
 
     public Transform punto;
-
+    public float shootRate;
+    private float m_shootRateTimeStamp;
     public Transform player;
 
     GameObject objetivo;
+    //public AudioClip AudioDisparo;
+    
+    public float reloadTime = 2.5f;
+    
+    public Transform posi;
+    public Rigidbody bullet;
 
     public Transform cabeza;
 
     public float distanciaAtaque = 10f;
 
     private NavMeshAgent agente;
+    public Punto VidaTorre;
 
     public enum EstadosRobot
     {
@@ -62,6 +70,7 @@ public class Robot : MonoBehaviour
         agente.destination = punto.position;
         agente.speed = 10f;
         objetivo = GameObject.Find("Personaje_1");
+        VidaTorre = GetComponent<Punto>();
     }
 
     // Update is called once per frame
@@ -103,6 +112,15 @@ public class Robot : MonoBehaviour
             default:
                 break;
         }
+        // Cuando el enemigo llega al castillo
+        if (Vector3.Distance(transform.position, agente.destination) <= 3f)
+        {
+            Destroy(gameObject);
+            
+            float dañoso = 50f;
+            Punto puntoTorre = punto.GetComponent<Punto>();
+            puntoTorre.AplicarDañoTorre(dañoso);
+        }
     }
 
 
@@ -114,27 +132,13 @@ public class Robot : MonoBehaviour
     {
         RaycastHit hit;
         //transform.GetComponent<AudioSource>().PlayOneShot(AudioDisparo);
-        efecto.active = true;
-        Invoke("FX", 0.2f);
-
-        if (Physics.Raycast(PuntoDisparo.position, transform.TransformDirection(Vector3.forward), out hit, range))
+       
+        
+        if (Time.time > m_shootRateTimeStamp)
         {
-            Debug.Log("Estoy en el rango para darle al jugador");
-
-            Debug.Log(hit.transform.name);
-            VidaP target = hit.transform.GetComponent<VidaP>();
-            if (target != null)
-            {
-
-                target.AplicarDano(Dano);
-            }
-            /* Debug.Log(hit.transform.name);
-             VidaIA target = hit.transform.GetComponent<VidaIA>();
-             if (target != null)
-             {
-
-                 target.AplicarDaño(Dano);
-             }*/
+            var clone = Instantiate(bullet, posi.position, posi.rotation);
+            clone.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
+            m_shootRateTimeStamp = Time.time + shootRate;
         }
 
     }

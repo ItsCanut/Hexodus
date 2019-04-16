@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1887,6 +1887,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c924becfd3debad49923cc6741228f80, type: 3}
+--- !u!1 &774481140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 774481143}
+  - component: {fileID: 774481142}
+  - component: {fileID: 774481141}
+  m_Layer: 5
+  m_Name: PantallaDeCarga
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &774481141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774481140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &774481142
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774481140}
+  m_CullTransparentMesh: 0
+--- !u!224 &774481143
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774481140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 839733962}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &839733958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,6 +1974,7 @@ GameObject:
   - component: {fileID: 839733960}
   - component: {fileID: 839733959}
   - component: {fileID: 839733963}
+  - component: {fileID: 839733964}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1980,6 +2055,7 @@ RectTransform:
   m_Children:
   - {fileID: 1831456979}
   - {fileID: 434239489}
+  - {fileID: 774481143}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2000,6 +2076,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f44fcdb4e9b2684db8e0fe27d349232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &839733964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839733958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ede2d80be467840b5a6deb4fb1093c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageDeCarga: {fileID: 774481141}
+  velocidadAparecer: 0.5
+  velocidadOcultar: 0.5
 --- !u!1 &843092293
 GameObject:
   m_ObjectHideFlags: 3
@@ -2442,16 +2533,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: isla3
       objectReference: {fileID: 0}
-    - target: {fileID: 2542183626252724757, guid: b87b533aa8bf56848be274477dc03cb9,
-        type: 3}
-      propertyPath: m_Name
-      value: isla4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2542183625475746457, guid: b87b533aa8bf56848be274477dc03cb9,
-        type: 3}
-      propertyPath: m_Name
-      value: Isla1
-      objectReference: {fileID: 0}
     - target: {fileID: 6265228689638964187, guid: b87b533aa8bf56848be274477dc03cb9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2506,6 +2587,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542183626252724757, guid: b87b533aa8bf56848be274477dc03cb9,
+        type: 3}
+      propertyPath: m_Name
+      value: isla4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542183625475746457, guid: b87b533aa8bf56848be274477dc03cb9,
+        type: 3}
+      propertyPath: m_Name
+      value: Isla1
       objectReference: {fileID: 0}
     - target: {fileID: 6456514693864571955, guid: b87b533aa8bf56848be274477dc03cb9,
         type: 3}

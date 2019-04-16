@@ -33,9 +33,10 @@ public class VidaP : MonoBehaviour
         HealthBar.size = vida / 100f;
 
 
-        if (vida <=0)
+        if (vida <=0f)
         {
             Destroy(gameObject);
+            
         }
 
     }  

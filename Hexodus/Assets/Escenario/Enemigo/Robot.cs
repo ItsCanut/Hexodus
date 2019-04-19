@@ -10,8 +10,8 @@ public class Robot : MonoBehaviour
     public Transform PuntoDisparo;
 
     //public Rigidbody projectile;
-    public float speed = 20f;
-    public int Dano = 10;
+    public float speed = 5f;
+    public int Dano = 5;
     public float range = 10f;
     //public AudioClip AudioDisparo;
     public GameObject efecto;

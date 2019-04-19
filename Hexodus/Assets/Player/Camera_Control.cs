@@ -13,6 +13,7 @@ public class Camera_Control : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.visible = false;
         LockCursor();
         GanchoAxisx = 0.0f;
     }

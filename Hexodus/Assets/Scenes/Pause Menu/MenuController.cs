@@ -16,12 +16,15 @@ public class MenuController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Cursor.visible = true;
+
             if (isPaused)
             {
                 ResumeGame();
             }
             else
             {
+                Cursor.lockState = CursorLockMode.Locked;
                 isPaused = true;
                 pauseMenu.SetActive(true);
                 Time.timeScale = 0f;        // Speed time runs (frozen)

@@ -63,6 +63,7 @@
     <Compile Include="Assets\Escenario\Enemigo\BulletIA.cs" />
     <Compile Include="Assets\Escenario\Enemigo\Robot.cs" />
     <Compile Include="Assets\Escenario\Enemigo\TestRobot.cs" />
+    <Compile Include="Assets\Escenario\Enemigo\VidaIA.cs" />
     <Compile Include="Assets\Escenario\Suelo\Fuente\aniFuente.cs" />
     <Compile Include="Assets\init.cs" />
     <Compile Include="Assets\MenuMuerte.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="Assets\Player\Movimiento_Player.cs" />
     <Compile Include="Assets\Player\ShootPrefab.cs" />
     <Compile Include="Assets\Player\Spawner.cs" />
-    <Compile Include="Assets\Player\VidaIA.cs" />
     <Compile Include="Assets\Player\VidaP.cs" />
     <Compile Include="Assets\PolarizedPlatformPack\Demo\Scripts\ViewDrag.cs" />
     <Compile Include="Assets\Scenes\Main Menu\menu.cs" />

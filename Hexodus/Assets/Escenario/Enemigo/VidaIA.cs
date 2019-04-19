@@ -12,7 +12,7 @@ public class VidaIA : MonoBehaviour
         health -= amount;
         if( health<= 0f)
         {
-            Debug.Log("He muerto");
+            
             Destroy(gameObject);
         }
     }

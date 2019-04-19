@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class VidaP : MonoBehaviour
 {
-    public float vida = 500;
+    public float vida = 500000f;
     //public GameObject vidahud;
 
     public Scrollbar HealthBar;
@@ -19,7 +19,7 @@ public class VidaP : MonoBehaviour
     }
 
     // Update is called once per frame
-  public void AplicarDano(int dano)
+  public void AplicarDano(float dano)
     {
         vida -= dano;
 

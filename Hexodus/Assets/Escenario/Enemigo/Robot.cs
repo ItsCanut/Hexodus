@@ -70,8 +70,8 @@ public class Robot : MonoBehaviour
         {
             case EstadosRobot.Patrulla: 
                 agente.speed = 4f;
-                efecto.active = false;
-                
+                efecto.SetActive(false);
+
                 if (Vector3.Distance(transform.position, player.position) < distanciaAtaque)
                 {
                     Estado = EstadosRobot.Ataque;
@@ -112,7 +112,7 @@ public class Robot : MonoBehaviour
 
     void FX()
     {
-        efecto.active = false;
+        efecto.SetActive(false);
     }
     void Shoot()
     {
@@ -120,7 +120,7 @@ public class Robot : MonoBehaviour
         //transform.GetComponent<AudioSource>().PlayOneShot(AudioDisparo);       
         if (Time.time > m_shootRateTimeStamp)
         {
-            efecto.active = true;
+            efecto.SetActive(true);
             Invoke("FX",0.5f);
             var cloneBullet = Instantiate(bullet, posi.position, posi.rotation);
             cloneBullet.velocity = cabeza.TransformDirection(new Vector3(0, -speedBullet, 0));

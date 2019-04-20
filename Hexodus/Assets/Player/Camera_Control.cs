@@ -5,7 +5,7 @@ using UnityEngine;
 public class Camera_Control : MonoBehaviour
 {
     [SerializeField] private string mouseXInputName= "150", mouseYInputName="150";
-    [SerializeField] private float mouseSensitivity;
+    [SerializeField] private float mouseSensitivity = 150f;
 
     [SerializeField] private Transform playerBody;
 

@@ -2212,6 +2212,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemigo
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 75cdf188ef8f2754784d085385bc3042, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 75cdf188ef8f2754784d085385bc3042, type: 3}
       propertyPath: m_LocalPosition.x
       value: 65.04
@@ -2308,7 +2312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a23bbed1dfefe145acda8c311754067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 100
 --- !u!114 &523923290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2331,7 +2335,7 @@ MonoBehaviour:
   punto: {fileID: 10439103}
   player: {fileID: 1654646605}
   cabeza: {fileID: 523923287}
-  speed: 4
+  speed: 50
   VidaTorre: {fileID: 938843605}
 --- !u!135 &523923291
 SphereCollider:
@@ -2384,6 +2388,20 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -15.104001, y: 0, z: 20}
   m_TimeToStationary: 0.5
+--- !u!136 &526317571
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526317565}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 15
+  m_Height: 50
+  m_Direction: 2
+  m_Center: {x: -15.103954, y: -0.00029516217, z: 20.000002}
 --- !u!1 &528082408 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 412025607, guid: 8b46921067579d0459a1753fbf57845b,
@@ -2584,6 +2602,20 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -15.104001, y: 0, z: 20}
   m_TimeToStationary: 0.5
+--- !u!136 &566927295
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566927290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 15
+  m_Height: 50
+  m_Direction: 2
+  m_Center: {x: -15.103946, y: -0.00029516217, z: 20.000002}
 --- !u!1 &579095248
 GameObject:
   m_ObjectHideFlags: 0
@@ -6449,17 +6481,17 @@ PrefabInstance:
     - target: {fileID: 6394885013327780660, guid: 8b46921067579d0459a1753fbf57845b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.26
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 6394885013327780660, guid: 8b46921067579d0459a1753fbf57845b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 6394885013327780660, guid: 8b46921067579d0459a1753fbf57845b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.01
+      value: -2.04
       objectReference: {fileID: 0}
     - target: {fileID: 6394885013327780660, guid: 8b46921067579d0459a1753fbf57845b,
         type: 3}
@@ -6565,6 +6597,19 @@ PrefabInstance:
       propertyPath: efecto
       value: 
       objectReference: {fileID: 635840409}
+    - target: {fileID: 6254878554796481645, guid: 8b46921067579d0459a1753fbf57845b,
+        type: 3}
+      propertyPath: shootRate
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 534669906, guid: 8b46921067579d0459a1753fbf57845b, type: 3}
+      propertyPath: mouseSensitivity
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508818046, guid: 8b46921067579d0459a1753fbf57845b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 412025609, guid: 8b46921067579d0459a1753fbf57845b, type: 3}
     - {fileID: 0}

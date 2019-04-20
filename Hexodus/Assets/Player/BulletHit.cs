@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BulletHit : MonoBehaviour
 {
-    public int daño = 100;
+    public float daño = 10;
 
     private void OnCollisionEnter(Collision collision)
     {
-        collision.transform.SendMessage("AplicarDaño", daño,SendMessageOptions.DontRequireReceiver);
+        collision.transform.SendMessage("AplicarDaño", daño, SendMessageOptions.DontRequireReceiver);
 
         Destroy(this.gameObject);
     }

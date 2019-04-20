@@ -12,28 +12,24 @@ public class Disparo : MonoBehaviour
     public float range = 500f;
     public AudioClip AudioDisparo ;
     public GameObject efecto;
-
     public Camera fpsCam;
+
     private void Start()
     {
-        efecto.active = false;
+        efecto.SetActive(false);
     }
     // Update is called once per frame
     void Update ()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-
-
-            Shoot();
-            
+            Shoot();           
         }
     }
 
-
     void FX()
     {
-        efecto.active=false;
+        efecto.SetActive(false);
     }
     void Shoot()
     {
@@ -41,7 +37,7 @@ public class Disparo : MonoBehaviour
         //Rigidbody instantiatedProjectile = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
         //instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
         transform.GetComponent<AudioSource>().PlayOneShot(AudioDisparo);
-        efecto.active = true;
+        efecto.SetActive(true);
         Invoke("FX", 0.2f);
         if(Physics.Raycast(fpsCam.transform.position,fpsCam.transform.forward,out hit,range))
         {

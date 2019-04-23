@@ -20,12 +20,14 @@ public class Robot : MonoBehaviour
     public GameObject efecto;
 
     //--caracteristicas y posicionamiento enemigo
-    public Transform punto;   
+    public Transform punto;
+    
     public Transform player;
     GameObject objetivo;
     public Transform cabeza;
     private NavMeshAgent agente;
     public float speed = 4f;
+
     public Punto VidaTorre;
 
 
@@ -56,9 +58,7 @@ public class Robot : MonoBehaviour
     void Start()
     {
         agente = GetComponent<NavMeshAgent>();       
-        agente.destination = punto.transform.position;
-        
-        
+        agente.destination = punto.transform.position;                
         objetivo = GameObject.Find("Personaje_1");
         VidaTorre = GetComponent<Punto>();
     }//fin start

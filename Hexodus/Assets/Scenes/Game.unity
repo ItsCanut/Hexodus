@@ -2214,7 +2214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 75cdf188ef8f2754784d085385bc3042, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 75cdf188ef8f2754784d085385bc3042, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2312,7 +2312,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a23bbed1dfefe145acda8c311754067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 200
+  elPlayer: {fileID: 1654646605}
+  elPla: {fileID: 969296740}
+  losOricos: 0
+  losHierricos: 0
 --- !u!114 &523923290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3770,8 +3774,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164d87fa21265644cad4139bebfc3a4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 50000
+  vida: 10000
   HealthBar: {fileID: 2050003225}
+  oro: 0
+  hierro: 0
 --- !u!95 &969296743
 Animator:
   serializedVersion: 3

@@ -9,21 +9,29 @@ public class VidaP : MonoBehaviour
 {
     public float vida = 10000f;    
     public Scrollbar HealthBar;
+    public GameObject orico;
+    public GameObject loHierro;
 
     public int oro = 0;
     public int hierro = 0;
+    Text or;
+    Text fer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        or = orico.GetComponent<Text>();
+        fer = loHierro.GetComponent<Text>();
     }
 
     public void ContarMateriales(int _oro, int _hierro)
     {
         oro += _oro;
+        or.text = oro.ToString();
         Debug.Log("--Tienes " + oro + " de oro--");
+
         hierro += _hierro;
+        fer.text = hierro.ToString();
         Debug.Log("--Tienes " + hierro + " de hierro--");
     }
 

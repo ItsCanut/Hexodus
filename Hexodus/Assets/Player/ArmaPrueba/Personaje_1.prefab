@@ -90,8 +90,8 @@ GameObject:
   - component: {fileID: 68667172}
   - component: {fileID: 68667171}
   - component: {fileID: 68667170}
-  - component: {fileID: 68667169}
   - component: {fileID: 68667173}
+  - component: {fileID: 8849751053653866600}
   m_Layer: 0
   m_Name: Personaje_1
   m_TagString: Player
@@ -145,20 +145,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &68667169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68667168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164d87fa21265644cad4139bebfc3a4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: 500000
-  vidahud: {fileID: 1944990453}
 --- !u!114 &68667173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +161,25 @@ MonoBehaviour:
   caminar: 2
   inFloor: 0
   jumpHeight: 200
+--- !u!114 &8849751053653866600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68667168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164d87fa21265644cad4139bebfc3a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 100
+  HealthBar: {fileID: 1122737344692486083, guid: a9f0103eab44b044bacb5126e4f1502e,
+    type: 3}
+  orico: {fileID: 0}
+  loHierro: {fileID: 0}
+  oro: 0
+  hierro: 0
 --- !u!1 &199353487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,6 +1811,7 @@ MonoBehaviour:
   bullet: {fileID: 1706667621303817326, guid: 5e02e2f3e785d3e4eb4e2b191ba53d57, type: 3}
   shootRate: 0.5
   speed: 70
+  efecto: {fileID: 0}
 --- !u!1 &1704283289
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,8 +2291,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164d87fa21265644cad4139bebfc3a4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 2000
-  vidahud: {fileID: 1944990453}
+  vida: 0
+  HealthBar: {fileID: 0}
+  orico: {fileID: 0}
+  loHierro: {fileID: 0}
+  oro: 0
+  hierro: 0
 --- !u!1 &2020529908
 GameObject:
   m_ObjectHideFlags: 0

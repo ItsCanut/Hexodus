@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class VidaP : MonoBehaviour
 {
-    public float vida = 10000f;    
-    public Scrollbar HealthBar;
+   public  float vida = 100f;    
+    public Image HealthBar;
     public GameObject orico;
     public GameObject loHierro;
 
@@ -22,6 +22,7 @@ public class VidaP : MonoBehaviour
     {
         or = orico.GetComponent<Text>();
         fer = loHierro.GetComponent<Text>();
+       
     }
 
     public void ContarMateriales(int _oro, int _hierro)
@@ -39,8 +40,24 @@ public class VidaP : MonoBehaviour
   public void AplicarDano(float dano)
     {
         vida -= dano;
-        HealthBar.size = vida / 100f;
 
+        HealthBar.fillAmount =vida/100 ;
+        if (HealthBar.fillAmount<= 0.5)
+        {
+            HealthBar.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);
+
+        }
+
+        if (HealthBar.fillAmount <= 0.35)
+        {
+            HealthBar.GetComponent<Image>().color = new Color(1, 0, 1, 1);
+
+        }
+        if (HealthBar.fillAmount <= 0.20)
+        {
+            HealthBar.GetComponent<Image>().color = new Color(1, 0, 0, 1);
+
+        }
         if (vida <=0f)
         {
             SceneManager.LoadScene("Start");

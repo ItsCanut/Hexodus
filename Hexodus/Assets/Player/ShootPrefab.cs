@@ -9,6 +9,7 @@ public class ShootPrefab : MonoBehaviour
     private float m_shootRateTimeStamp;
     public int speed = 50;
     public GameObject efecto;
+    
 
 
     // Update is called once per frame

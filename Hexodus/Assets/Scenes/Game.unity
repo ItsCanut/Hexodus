@@ -2419,6 +2419,7 @@ MonoBehaviour:
   health: 200
   elPlayer: {fileID: 1654646605}
   elPla: {fileID: 0}
+  explosion: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
   losOricos: 0
   losHierricos: 0
 --- !u!114 &523923290

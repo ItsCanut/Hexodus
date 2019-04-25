@@ -7,7 +7,7 @@ public class VidaIA : MonoBehaviour
     public float health = 200f;
     public Transform elPlayer;
     public VidaP elPla;
-
+    public GameObject explosion;
     public int losOricos;
     public int losHierricos;
 
@@ -30,6 +30,8 @@ public class VidaIA : MonoBehaviour
         {            
             VidaP losMateriales = elPlayer.GetComponent<VidaP>();
             losMateriales.ContarMateriales(losOricos, losHierricos);
+            GameObject exp = Instantiate(explosion,transform.position,Quaternion.identity);
+            Destroy(exp,.25f);
             Destroy(gameObject);
         }
     }

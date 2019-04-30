@@ -12,15 +12,13 @@ public class Spawner2 : MonoBehaviour
     //declaraciones  
     public GameObject robot;
     public int cuantosQuieroSpawnear;
-    public GameObject nRonda;
-    public GameObject nRestantes;
     int ronda;
     float waveTimer = 5.0f;
     float timeTillWave = 0.0f;
     int contWaves;
     int cuantasWaves;
     bool spawn;
-    Text restantes;
+
 
     void Start()
     {
@@ -30,8 +28,6 @@ public class Spawner2 : MonoBehaviour
         contWaves = 0;
         spawn = true;
         cuantasWaves = 4;
-        restantes = nRestantes.GetComponent<Text>();
-        restantes.text = (cuantasWaves * cuantosQuieroSpawnear).ToString();
     }
 
     // Draws a cube to show where the spawn point is... Useful if you don't have a object that show the spawn point
@@ -46,16 +42,13 @@ public class Spawner2 : MonoBehaviour
     void Update()
     {
         int enemigosRestantes = GameObject.FindGameObjectsWithTag("Enemigo").Length; // devuelve el numero de robots que hay en el mapa
-        Text text = nRonda.GetComponent<Text>();
-
 
         if (contWaves >= cuantasWaves && enemigosRestantes.Equals(2))
         {
             ronda++;
             contWaves = 0;
-            spawn = true;
             cuantasWaves++;
-            restantes.text = (cuantasWaves * cuantosQuieroSpawnear).ToString();
+            spawn = true;
         }
 
         if (contWaves < cuantasWaves && spawn)
@@ -63,7 +56,6 @@ public class Spawner2 : MonoBehaviour
             spawnTimed(robot);
         }
 
-        text.text = ronda.ToString();
 
     }
 
@@ -79,7 +71,7 @@ public class Spawner2 : MonoBehaviour
     private void spawnTimed(GameObject elEnemigo)
     {
         timeTillWave += Time.deltaTime;
-        if (timeTillWave >= waveTimer && ronda >= 3 )
+        if (timeTillWave >= waveTimer)
         {
             spawnEnemy(robot, cuantosQuieroSpawnear);
             contWaves++;

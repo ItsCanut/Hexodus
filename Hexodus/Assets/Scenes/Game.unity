@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1467,6 +1467,11 @@ PrefabInstance:
       propertyPath: castillo2
       value: 
       objectReference: {fileID: 2800000, guid: a057d8c9e28c05b4db6881af7f0252a6, type: 3}
+    - target: {fileID: 2616862553854634227, guid: 6deaf046313630a4aad7c652954adbae,
+        type: 3}
+      propertyPath: cuantosRonda
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6deaf046313630a4aad7c652954adbae, type: 3}
 --- !u!1001 &289989031
@@ -3457,7 +3462,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 50878581}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &850701306
+--- !u!114 &850701308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3466,13 +3471,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 850701305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22ac83bf5081fdf40ba980b4f58a0be8, type: 3}
+  m_Script: {fileID: 11500000, guid: 145210e5614a5ce4b9d196c28978faf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   robot: {fileID: 523923286}
   cuantosQuieroSpawnear: 1
-  nRonda: {fileID: 1592027726}
-  nRestantes: {fileID: 338141740}
 --- !u!1001 &865985959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7658,7 +7661,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1158862767}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1688517887
+--- !u!114 &1688517889
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7667,13 +7670,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1688517886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22ac83bf5081fdf40ba980b4f58a0be8, type: 3}
+  m_Script: {fileID: 11500000, guid: 145210e5614a5ce4b9d196c28978faf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   robot: {fileID: 523923286}
   cuantosQuieroSpawnear: 1
-  nRonda: {fileID: 1592027726}
-  nRestantes: {fileID: 338141740}
 --- !u!1001 &1719679843
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
 
     //declaraciones  
     public GameObject robot;
+    public GameObject robotM;
     public int cuantosQuieroSpawnear;
     public GameObject nRonda;
     public GameObject nRestantes;
@@ -19,11 +20,15 @@ public class Spawner : MonoBehaviour
     float timeTillWave = 0.0f;
     int contWaves;
     int cuantasWaves;
+    public int cuantosRonda;
     bool spawn;
     Text restantes;
+    Spawner2 spawner2;
 
     void Start()
     {
+         
+        spawner2 = GetComponent<Spawner2>();
 
         //Enemigos que spawnean cuando iniciamos el juego.
         ronda = 1;
@@ -31,7 +36,8 @@ public class Spawner : MonoBehaviour
         spawn = true;
         cuantasWaves = 4;
         restantes = nRestantes.GetComponent<Text>();
-        restantes.text = (cuantasWaves * cuantosQuieroSpawnear).ToString();
+        restantes.text = (cuantasWaves * (cuantosQuieroSpawnear + 2)).ToString();
+        cuantosRonda = cuantasWaves * cuantosQuieroSpawnear + (spawner2.cuantosQuieroSpawnear * cuantasWaves);
     }
 
     // Draws a cube to show where the spawn point is... Useful if you don't have a object that show the spawn point
@@ -53,9 +59,10 @@ public class Spawner : MonoBehaviour
         {
             ronda++;
             contWaves = 0;
-            spawn = true;
             cuantasWaves++;
-            restantes.text = (cuantasWaves * cuantosQuieroSpawnear).ToString();
+            cuantosRonda = cuantasWaves * cuantosQuieroSpawnear;
+            restantes.text = (cuantasWaves * (cuantosQuieroSpawnear + 2)).ToString();
+            spawn = true;
         }
         
         if( contWaves < cuantasWaves && spawn )
@@ -82,6 +89,7 @@ public class Spawner : MonoBehaviour
         if (timeTillWave >= waveTimer)
         {
             spawnEnemy(robot, cuantosQuieroSpawnear);
+            //spawnEnemy(robotM, 1);
             contWaves++;
             timeTillWave = 0.0f;
         }

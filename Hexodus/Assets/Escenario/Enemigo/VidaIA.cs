@@ -35,7 +35,7 @@ public class VidaIA : MonoBehaviour
 
            /* GameObject exp = Instantiate(expl, transform.position, Quaternion.identity);
             Destroy(this.gameObject, 0.25f);*/
-            Destroy(exp,1.5f);
+           // Destroy(exp,1.5f);
         }
     }
 }

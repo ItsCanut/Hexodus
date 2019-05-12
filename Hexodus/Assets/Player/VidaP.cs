@@ -42,6 +42,7 @@ public class VidaP : MonoBehaviour
         vida -= dano;
 
         HealthBar.fillAmount =vida/100 ;
+
         if (HealthBar.fillAmount<= 0.5)
         {
             HealthBar.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);

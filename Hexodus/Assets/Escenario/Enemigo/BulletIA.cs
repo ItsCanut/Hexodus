@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletIA : MonoBehaviour
 {
-    public float daño = 2f;
+    public float daño = 5f;
 
     private void OnCollisionEnter(Collision collision)
     {

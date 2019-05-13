@@ -14,6 +14,8 @@ public class Spawner : MonoBehaviour
     public int cuantosQuieroSpawnear;
     public GameObject nRonda;
     public GameObject nRestantes;
+    public GameObject boss;
+    public GameObject magico;
     int ronda;
     float waveTimer = 5.0f;
     float timeTillWave = 0.0f;
@@ -21,6 +23,7 @@ public class Spawner : MonoBehaviour
     int cuantasWaves;
     bool spawn;
     Text restantes;
+    bool spawn1;
 
     void Start()
     {
@@ -29,9 +32,10 @@ public class Spawner : MonoBehaviour
         ronda = 1;
         contWaves = 0;
         spawn = true;
+        spawn1 = true;
         cuantasWaves = 4;
         restantes = nRestantes.GetComponent<Text>();
-        restantes.text = (cuantasWaves * cuantosQuieroSpawnear).ToString();
+        restantes.text = (cuantasWaves * cuantosQuieroSpawnear + cuantasWaves + 2 * (cuantosQuieroSpawnear - 1) * cuantasWaves).ToString();
     }
 
     // Draws a cube to show where the spawn point is... Useful if you don't have a object that show the spawn point
@@ -49,19 +53,23 @@ public class Spawner : MonoBehaviour
         Text text = nRonda.GetComponent<Text>();
         
         
-        if( contWaves >= cuantasWaves && enemigosRestantes.Equals(2) )
+        if( contWaves >= cuantasWaves && enemigosRestantes.Equals(1) )
         {
             ronda++;
             contWaves = 0;
             spawn = true;
             cuantasWaves++;
-            restantes.text = (cuantasWaves * cuantosQuieroSpawnear).ToString();
+            spawn1 = true;
+            cuantosQuieroSpawnear++;
+            restantes.text = (cuantasWaves * cuantosQuieroSpawnear + cuantasWaves + 2 * (cuantosQuieroSpawnear - 1)).ToString();
         }
-        
-        if( contWaves < cuantasWaves && spawn )
+
+
+        if (contWaves < cuantasWaves && spawn)
         {
             spawnTimed(robot);
         }
+
 
         text.text = ronda.ToString();
 
@@ -82,6 +90,12 @@ public class Spawner : MonoBehaviour
         if (timeTillWave >= waveTimer)
         {
             spawnEnemy(robot, cuantosQuieroSpawnear);
+            spawnEnemy(magico, 1);
+            if(ronda % 2 == 0 && spawn1)
+            {
+                spawnEnemy(boss, 1);
+                spawn1 = false;
+            }
             contWaves++;
             timeTillWave = 0.0f;
         }

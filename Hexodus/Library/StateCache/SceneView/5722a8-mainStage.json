@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":263.8809814453125,"y":-40.042762756347659,"z":258.322021484375},"rotation":{"x":0.10717099905014038,"y":0.20777463912963868,"z":-0.022908898070454599,"w":0.9720181822776794},"size":439.98236083984377,"orthographic":false}
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":0.4456634521484375,"y":85.84169006347656,"z":0.0},"rotation":{"x":0.0,"y":1.0,"z":0.0,"w":0.0},"size":370.6400146484375,"orthographic":false}
@@ -7,3 +8,6 @@
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":0.4456634521484375,"y":85.84169006347656,"z":0.0},"rotation":{"x":0.0,"y":1.0,"z":0.0,"w":0.0},"size":370.6400146484375,"orthographic":false}
 >>>>>>> parent of 9b1a41d8... ni idea
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-43.900001525878909,"y":8.630000114440918,"z":-31.200000762939454},"rotation":{"x":0.10717099905014038,"y":0.20777463912963868,"z":-0.022908898070454599,"w":0.9720181822776794},"size":22.0,"orthographic":false}
+>>>>>>> parent of 81e3845f... Suelo

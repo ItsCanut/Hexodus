@@ -18,6 +18,7 @@ public class Spawner2 : MonoBehaviour
     int contWaves;
     int cuantasWaves;
     bool spawn;
+    bool spawn1;
    
 
     void Start()
@@ -28,6 +29,7 @@ public class Spawner2 : MonoBehaviour
         contWaves = 0;
         spawn = true;
         cuantasWaves = 4;
+        spawn1 = true;
     }
 
     // Draws a cube to show where the spawn point is... Useful if you don't have a object that show the spawn point
@@ -48,6 +50,7 @@ public class Spawner2 : MonoBehaviour
             ronda++;
             contWaves = 0;
             spawn = true;
+            spawn1 = true;
             cuantasWaves++;
             cuantosQuieroSpawnear++;
         }
@@ -74,6 +77,11 @@ public class Spawner2 : MonoBehaviour
         if (timeTillWave >= waveTimer)
         {
             spawnEnemy(robot, cuantosQuieroSpawnear);
+            if (ronda % 2 == 0 && spawn1)
+            {
+                cuantosQuieroSpawnear++;
+                spawn1 = false;
+            }
             contWaves++;
             timeTillWave = 0.0f;
         }

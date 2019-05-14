@@ -16,6 +16,7 @@ public class Spawner : MonoBehaviour
     public GameObject nRestantes;
     public GameObject boss;
     public GameObject magico;
+    public int cuantosBoss;
     int ronda;
     float waveTimer = 5.0f;
     float timeTillWave = 0.0f;
@@ -53,14 +54,13 @@ public class Spawner : MonoBehaviour
         Text text = nRonda.GetComponent<Text>();
         
         
-        if( contWaves >= cuantasWaves && enemigosRestantes.Equals(1) )
+        if( contWaves >= cuantasWaves && enemigosRestantes.Equals(2) )
         {
             ronda++;
             contWaves = 0;
             spawn = true;
             cuantasWaves++;
             spawn1 = true;
-            cuantosQuieroSpawnear++;
             restantes.text = (cuantasWaves * cuantosQuieroSpawnear + cuantasWaves + 2 * (cuantosQuieroSpawnear - 1)).ToString();
         }
 
@@ -93,7 +93,9 @@ public class Spawner : MonoBehaviour
             spawnEnemy(magico, 1);
             if(ronda % 2 == 0 && spawn1)
             {
-                spawnEnemy(boss, 1);
+                spawnEnemy(boss, cuantosBoss);
+                cuantosQuieroSpawnear++;
+                cuantosBoss++;
                 spawn1 = false;
             }
             contWaves++;

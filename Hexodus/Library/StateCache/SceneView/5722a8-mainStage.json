@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-24.26789665222168,"y":54.0473747253418,"z":-102.97084045410156},"rotation":{"x":-0.2031889706850052,"y":-0.00791869591921568,"z":0.0016455291770398617,"w":-0.9791061878204346},"size":8.072029113769532,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":0.4456634521484375,"y":85.84169006347656,"z":0.0},"rotation":{"x":0.0,"y":1.0,"z":0.0,"w":0.0},"size":370.6400146484375,"orthographic":false}
+>>>>>>> parent of 9b1a41d8... ni idea

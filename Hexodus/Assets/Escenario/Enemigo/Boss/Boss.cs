@@ -26,6 +26,7 @@ public class Boss : MonoBehaviour
     public Rigidbody bullet;
     public Transform robotito;
     public Transform salidaRobotito;
+    
 
     //--estados del enemigo
     public enum EstadosRobot

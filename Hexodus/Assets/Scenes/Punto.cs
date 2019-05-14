@@ -16,6 +16,7 @@ public class Punto : MonoBehaviour
     public Sprite cas2;
     public Sprite cas3;
     public Sprite cas4;
+    public GameObject expl;
 
     void Update()
     {
@@ -26,7 +27,11 @@ public class Punto : MonoBehaviour
 
 
         VidaTorre -= amount;
-       
+
+        GameObject exp = Instantiate(expl, transform.position, Quaternion.identity);
+        
+        Destroy(exp, 1f);
+
 
         if (VidaTorre <= 750f)
         {

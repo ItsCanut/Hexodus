@@ -8,7 +8,7 @@ public class Hechizos : MonoBehaviour
     public ParticleSystem flames;
     public ParticleSystem rocas;
     public Image mana;
-    public float Mana = 100f;
+    public float Mana = 400f;
     private float tiempo;
     public float RecMana= 2f;
 
@@ -29,7 +29,7 @@ public class Hechizos : MonoBehaviour
            
             flames.Play();
             if (Mana>0 ) {
-                Mana -= 1f;
+                Mana -= 0.5f;
                 mana.fillAmount = Mana / 100;
             }
            
@@ -44,7 +44,7 @@ public class Hechizos : MonoBehaviour
             rocas.Play();
             if (Mana > 0 )
             {
-                Mana -= 1f;
+                Mana -= 0.5f;
                 mana.fillAmount = Mana / 100;
             }
 

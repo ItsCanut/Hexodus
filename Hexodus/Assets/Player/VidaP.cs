@@ -12,6 +12,8 @@ public class VidaP : MonoBehaviour
     public GameObject orico;
     public GameObject loHierro;
 
+    public GameObject menuMuerte;
+
     private float tiempo;
     public float RecVida = 5f;
 
@@ -70,8 +72,10 @@ public class VidaP : MonoBehaviour
 
         if (vida <=0f)
         {
-            
-            SceneManager.LoadScene("Start");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0f;
+            menuMuerte.gameObject.SetActive(true);
         }
 
     }  

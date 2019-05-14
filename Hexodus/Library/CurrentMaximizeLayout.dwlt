@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 88
+  controlID: 564
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 89
+  controlID: 565
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 224}
   m_MaxSize: {x: 8004, y: 4024}
   vertical: 0
-  controlID: 49
+  controlID: 566
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,10 +209,10 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 332}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 3ce8ffffd6f2ffffccfbffff
+      m_ExpandedIDs: d4fbffff8e160000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -437,20 +437,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/JUEGO
+    - Assets/Scenes/JUEGO/Tienda
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/JUEGO
+  - Assets/Scenes/JUEGO/Tienda
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Usuario\Desktop\proyecto videojuego\juego en si\GitHub\Hexodus\Hexodus
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 455}
-    m_SelectedIDs: a82e0000
-    m_LastClickedID: 11944
-    m_ExpandedIDs: 000000006a280000ce280000922a00002e2c0000362d0000a82e0000e02e00000a2f00001c2f0000b42f0000cc2f00000c3000001c3a00001e3a0000203a0000223a0000243a0000263a0000283a00002a3a000000ca9a3b
+    scrollPos: {x: 0, y: 291}
+    m_SelectedIDs: fc100000
+    m_LastClickedID: 4348
+    m_ExpandedIDs: 00000000be0b0000220c0000e60d0000820f00008a100000fc110000341200005e12000070120000081300002013000060130000563c0000583c00005a3c00005c3c00005e3c0000603c0000623c0000643c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -478,7 +478,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006a280000ce280000922a00002e2c0000362d0000a82e0000e02e00000a2f00001c2f0000b42f0000cc2f00000c3000001c3a00001e3a0000203a0000223a0000243a0000263a0000283a00002a3a0000
+    m_ExpandedIDs: 00000000be0b0000220c0000e60d0000820f00008a100000fc110000341200005e12000070120000081300002013000060130000563c0000583c00005a3c00005c3c00005e3c0000603c0000623c0000643c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -503,8 +503,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ae430000
-    m_LastClickedInstanceID: 17326
+    m_SelectedInstanceIDs: 6c090000
+    m_LastClickedInstanceID: 2412
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000a45e0000705e0000b05e0000945e0000
     m_RenameOverlay:
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -747644
+  m_LastSelectedObjectID: 5842
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52

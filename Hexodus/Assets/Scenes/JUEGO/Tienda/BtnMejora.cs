@@ -134,7 +134,7 @@ public class BtnMejora : MonoBehaviour
             textoPuntuacion.text = Puntuacion.ToString();
             velocidad = velocidad + 1;
             danyo = danyo + 1;
-            vida = vida + 1;
+          //  vida = vida + 1;
         }
 
     }

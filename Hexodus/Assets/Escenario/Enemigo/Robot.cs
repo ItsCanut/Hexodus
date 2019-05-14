@@ -10,7 +10,12 @@ public class Robot : MonoBehaviour
     public int Dano = 5;   
     public float shootRate = 1f;
     private float m_shootRateTimeStamp;
-   
+
+    public static Robot instace;
+    public int CurrentScore;
+
+    
+
     public Transform posi;
     public Rigidbody bullet;
     public float distanciaAtaque = 13f;
@@ -24,8 +29,8 @@ public class Robot : MonoBehaviour
     public Transform player;
     GameObject objetivo;
     public Transform cabeza;
-    private NavMeshAgent agente;
-    public float speed = 4f;
+    private static NavMeshAgent agente;
+    public float speed = 5f;
     public Punto VidaTorre;
 
 
@@ -55,9 +60,11 @@ public class Robot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bool congAct = gameObject.GetComponent<CaracteristicasHielo>();
         agente = GetComponent<NavMeshAgent>();       
         agente.destination = punto.transform.position;
-        
+
+        instace = this;
         
         objetivo = GameObject.Find("Personaje_1");
         VidaTorre = GetComponent<Punto>();
@@ -66,10 +73,14 @@ public class Robot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         switch (Estado)
         {
-            case EstadosRobot.Patrulla: 
-                agente.speed = 4f;
+            case EstadosRobot.Patrulla:
+               
+                    agente.speed = 8f;
+                  
+                
                 efecto.SetActive(false);
 
                 if (Vector3.Distance(transform.position, player.position) < distanciaAtaque)
@@ -81,7 +92,10 @@ public class Robot : MonoBehaviour
             case EstadosRobot.Ataque:
 
                
-                agente.speed = 2f;
+                    agente.speed = 5f;
+                
+               
+
                 if (Vector3.Distance(transform.position, player.position) > distanciaAtaque)
                 {
                     Estado = EstadosRobot.Patrulla;
@@ -109,6 +123,20 @@ public class Robot : MonoBehaviour
 
     } //fin update
 
+    public void aplicarHielo(bool act)
+    {
+
+        if (act == true)
+        {
+            Debug.Log("--Es TRUE");
+            agente.speed = 0.1f;
+
+        }
+        
+
+
+    }
+   
 
     void FX()
     {

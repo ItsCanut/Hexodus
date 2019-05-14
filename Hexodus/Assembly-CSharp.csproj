@@ -683,10 +683,7 @@
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-<<<<<<< HEAD
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
-=======
->>>>>>> parent of 9b1a41d8... ni idea
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -694,8 +691,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-<<<<<<< HEAD
-=======
-  
->>>>>>> parent of 9b1a41d8... ni idea
 </Project>

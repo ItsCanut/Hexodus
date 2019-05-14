@@ -409,8 +409,13 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< HEAD
       scrollPos: {x: 0, y: 631.8089}
       m_SelectedIDs: 28320000
+=======
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+>>>>>>> parent of 9b1a41d8... ni idea
       m_LastClickedID: 0
       m_ExpandedIDs: fad0ffffbe3e0000c83e0000c23f0000ce3f0000d63f00000e400000304000009a400000a4400000dc400000e2400000
       m_RenameOverlay:
@@ -665,7 +670,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0

@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 8
-    y: 51
-    width: 1350
-    height: 669
+    x: 0
+    y: 43
+    width: 1920
+    height: 997
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,8 +43,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1350
-    height: 669
+    width: 1920
+    height: 997
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
@@ -64,7 +64,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1350
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -85,8 +85,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 649
-    width: 1350
+    y: 977
+    width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -109,12 +109,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1350
-    height: 619
+    width: 1920
+    height: 947
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 138
+<<<<<<< HEAD
+  controlID: 100
+=======
+  controlID: 10
+>>>>>>> parent of 81e3845f... Suelo
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,12 +138,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1073
-    height: 619
+    width: 1526
+    height: 947
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 139
+<<<<<<< HEAD
+  controlID: 11
+=======
+  controlID: 124
+>>>>>>> parent of 81e3845f... Suelo
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,12 +167,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1073
-    height: 345
+    height: 382
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 140
+  controlID: 12
+=======
+    width: 1526
+    height: 527
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
+  vertical: 0
+  controlID: 125
+>>>>>>> parent of 81e3845f... Suelo
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -182,10 +199,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 202
-    height: 345
+    height: 382
   m_MinSize: {x: 202, y: 224}
   m_MaxSize: {x: 4002, y: 4024}
+=======
+    width: 287
+    height: 527
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> parent of 81e3845f... Suelo
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -206,19 +230,27 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 202
+    x: 287
     y: 0
+<<<<<<< HEAD
     width: 871
-    height: 345
+    height: 382
   m_MinSize: {x: 204, y: 224}
   m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 15}
+=======
+    width: 1239
+    height: 527
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 13}
+>>>>>>> parent of 81e3845f... Suelo
   m_Panes:
   - {fileID: 15}
   - {fileID: 13}
   - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,9 +267,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 345
+<<<<<<< HEAD
+    y: 382
     width: 1073
-    height: 274
+    height: 237
+=======
+    y: 527
+    width: 1526
+    height: 420
+>>>>>>> parent of 81e3845f... Suelo
   m_MinSize: {x: 232, y: 274}
   m_MaxSize: {x: 10002, y: 10024}
   m_ActualView: {fileID: 17}
@@ -263,12 +301,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1073
+    x: 1526
     y: 0
-    width: 277
-    height: 619
-  m_MinSize: {x: 277, y: 74}
-  m_MaxSize: {x: 4002, y: 4024}
+    width: 394
+    height: 947
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -322,10 +360,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 210
     y: 81
     width: 867
-    height: 325
+    height: 362
+=======
+    x: 287
+    y: 73
+    width: 1235
+    height: 507
+>>>>>>> parent of 81e3845f... Suelo
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -337,10 +382,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -433.5
     m_HBaseRangeMax: 433.5
-    m_VBaseRangeMin: -154
-    m_VBaseRangeMax: 154
+    m_VBaseRangeMin: -172.5
+    m_VBaseRangeMax: 172.5
+=======
+    m_HBaseRangeMin: -617.5
+    m_HBaseRangeMax: 617.5
+    m_VBaseRangeMin: -245
+    m_VBaseRangeMax: 245
+>>>>>>> parent of 81e3845f... Suelo
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -349,7 +401,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -358,25 +410,43 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 867
-      height: 308
+      height: 345
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 433.5, y: 154}
+    m_Translation: {x: 433.5, y: 172.5}
+=======
+      width: 1235
+      height: 490
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 617.5, y: 245}
+>>>>>>> parent of 81e3845f... Suelo
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -433.5
-      y: -154
+      y: -172.5
       width: 867
-      height: 308
+      height: 345
+=======
+      x: -617.5
+      y: -245
+      width: 1235
+      height: 490
+>>>>>>> parent of 81e3845f... Suelo
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 867, y: 325}
+<<<<<<< HEAD
+  m_LastWindowPixelSize: {x: 867, y: 362}
+=======
+  m_LastWindowPixelSize: {x: 1235, y: 507}
+>>>>>>> parent of 81e3845f... Suelo
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -402,17 +472,39 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 8
     y: 81
     width: 200
-    height: 325
+    height: 362
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1244}
-      m_SelectedIDs: 28bdfeff
-      m_LastClickedID: -82648
-      m_ExpandedIDs: 7ac6feffa8f4ffff
+<<<<<<< HEAD
+      scrollPos: {x: 0, y: 631.8089}
+      m_SelectedIDs: 28320000
+=======
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+<<<<<<< HEAD
+>>>>>>> parent of 9b1a41d8... ni idea
+=======
+>>>>>>> parent of 9b1a41d8... ni idea
+      m_LastClickedID: 0
+      m_ExpandedIDs: fad0ffffbe3e0000c83e0000c23f0000ce3f0000d63f00000e400000304000009a400000a4400000dc400000e2400000
+=======
+    x: 0
+    y: 73
+    width: 285
+    height: 507
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: befaffff
+      m_LastClickedID: -1346
+      m_ExpandedIDs: d4fbffff
+>>>>>>> parent of 81e3845f... Suelo
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -457,10 +549,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 210
     y: 81
     width: 867
-    height: 325
+    height: 362
+=======
+    x: 287
+    y: 73
+    width: 1235
+    height: 507
+>>>>>>> parent of 81e3845f... Suelo
   m_PersistentViewDataDictionary: {fileID: 0}
   m_WindowGUID: 5722a8739d3b1ff419d2a509d65022f5
   m_SceneLighting: 1
@@ -468,9 +567,15 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.8434448, y: -38.547726, z: 35.53852}
+<<<<<<< HEAD
+    m_Target: {x: 263.88098, y: -40.042763, z: 258.32202}
     speed: 2
-    m_Value: {x: 2.8434448, y: -38.547726, z: 35.53852}
+    m_Value: {x: 263.88098, y: -40.042763, z: 258.32202}
+=======
+    m_Target: {x: -43.9, y: 8.63, z: -31.2}
+    speed: 2
+    m_Value: {x: -43.9, y: 8.63, z: -31.2}
+>>>>>>> parent of 81e3845f... Suelo
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -498,19 +603,25 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.3035031, y: 0.47098294, z: -0.17664236, w: 0.8092331}
+    m_Target: {x: 0.107171, y: 0.20777464, z: -0.022908898, w: 0.9720182}
     speed: 2
-    m_Value: {x: 0.30350313, y: 0.470983, z: -0.17664237, w: 0.80923325}
+    m_Value: {x: 0.107171, y: 0.20777464, z: -0.022908898, w: 0.9720182}
   m_Size:
-    m_Target: 238.59906
+<<<<<<< HEAD
+    m_Target: 439.98236
     speed: 2
-    m_Value: 238.59906
+    m_Value: 439.98236
+=======
+    m_Target: 22
+    speed: 2
+    m_Value: 22
+>>>>>>> parent of 81e3845f... Suelo
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: 0.107171, y: 0.20777464, z: -0.022908898, w: 0.9720182}
+  m_LastSceneViewRotation: {x: 0.03962612, y: 0.23807412, z: -0.009722282, w: 0.97038966}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -563,10 +674,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 8
-    y: 426
+    y: 463
     width: 1071
-    height: 254
+    height: 217
+=======
+    x: 0
+    y: 600
+    width: 1524
+    height: 400
+>>>>>>> parent of 81e3845f... Suelo
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -580,20 +698,35 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Escenario/Suelo/Hierba
+<<<<<<< HEAD
+    - Assets/Escenario/Enemigo
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Escenario/Suelo/Hierba
+  - Assets/Escenario/Enemigo
+=======
+    - Assets/Player
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Player
+>>>>>>> parent of 81e3845f... Suelo
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\IVAN\Documents\GitHub\Hexodus\Hexodus
+  m_LastProjectPath: C:\Users\EMILIO\Documents\GitHub\Hexodus\Hexodus
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 2e400000
-    m_LastClickedID: 16430
-    m_ExpandedIDs: 00000000c23100005833000012350000b43600003e3700006837000086370000643f0000663f0000683f00006a3f00006c3f00006e3f0000703f0000723f000000ca9a3b
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 24}
+    m_SelectedIDs: ba3c0000
+    m_LastClickedID: 15546
+    m_ExpandedIDs: 00000000963a0000b83b0000ca3c0000003e0000143e00002a3e000040440000424400004444000046440000484400004a4400004c4400004e44000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 85}
+    m_SelectedIDs: 12110000
+    m_LastClickedID: 4370
+    m_ExpandedIDs: 00000000820b0000000d0000e00e0000f210000012110000301100007e36000080360000823600008436000086360000883600008a3600008c36000000ca9a3b
+>>>>>>> parent of 81e3845f... Suelo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -621,7 +754,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c231000058330000123500003e3700006837000086370000643f0000663f0000683f00006a3f00006c3f00006e3f0000703f0000723f0000
+<<<<<<< HEAD
+    m_ExpandedIDs: 00000000963a0000b83b0000ca3c0000003e00002a3e000040440000424400004444000046440000484400004a4400004c4400004e440000
+=======
+    m_ExpandedIDs: 00000000820b0000000d0000e00e0000f210000012110000301100007e36000080360000823600008436000086360000883600008a3600008c360000
+>>>>>>> parent of 81e3845f... Suelo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -665,7 +802,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -697,10 +834,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 600
-    width: 1524
-    height: 400
+    x: 8
+    y: 463
+    width: 1071
+    height: 217
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &19
 MonoBehaviour:
@@ -730,7 +867,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1346
+  m_LastSelectedObjectID: 12534
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -792,10 +929,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1081
-    y: 81
-    width: 275
-    height: 599
+    x: 1526
+    y: 73
+    width: 392
+    height: 927
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 

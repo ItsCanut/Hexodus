@@ -7,6 +7,8 @@ public class MenuController : MonoBehaviour
 {
     
     public GameObject pauseMenu;
+    public GameObject Ayuda;
+    public GameObject Ayudas;
     public bool isPaused;
 
     
@@ -27,6 +29,8 @@ public class MenuController : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 isPaused = true;
                 pauseMenu.SetActive(true);
+                Ayuda.SetActive(false);
+                Ayudas.SetActive(false);
                 Time.timeScale = 0f;        // Speed time runs (frozen)
             }
         }

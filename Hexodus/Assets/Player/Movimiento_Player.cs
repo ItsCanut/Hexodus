@@ -30,7 +30,7 @@ public class Movimiento_Player : MonoBehaviour
 
     IEnumerator Tiempo()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         velocidad=11f;
     }
 

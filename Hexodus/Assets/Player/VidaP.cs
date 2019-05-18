@@ -10,6 +10,7 @@ public class VidaP : MonoBehaviour
    public  float vida = 100f;    
     public Image HealthBar;
     public GameObject orico;
+    public GameObject Ayuda;
     public GameObject loHierro;
 
     public GameObject menuMuerte;
@@ -72,6 +73,7 @@ public class VidaP : MonoBehaviour
 
         if (vida <=0f)
         {
+            Ayuda.SetActive(false);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0f;

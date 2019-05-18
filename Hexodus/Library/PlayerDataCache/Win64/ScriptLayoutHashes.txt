@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Usuario/Desktop/proyecto videojuego/juego en si/GitHub/Hexodus/Ejecutables/sprint 4/Hexodus.exe
+C:/Users/IVAN/Desktop/Hexodus.exe
 SceneListBegin?
 Assets/Scenes/Main Menu/Main_Menu.unity
 Assets/Scenes/JUEGO/Game.unity
@@ -21,7 +21,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-b5f3f77ccd870f79d0a8f44b079bd0b0 Assembly-CSharp.dll:.MenuController
+33f3036a8eef956fd229d6e1ef639628 Assembly-CSharp.dll:.MenuController
 a2113831d3323f931007e1b3812dc814 Cinemachine.dll:Cinemachine.CinemachineFollowZoom
 d227987243593b32ae57394d06018643 Cinemachine.dll:Cinemachine.CinemachineFixedSignal
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
@@ -157,9 +157,9 @@ bd543bad7f9f6262f10595aadb130d22 Cinemachine.dll:Cinemachine.CinemachineComposer
 694d20920c0e41f567e119f7159a3644 Cinemachine.dll:Cinemachine.CinemachinePath
 47bc682877e9339ab173451d71946ebb Assembly-CSharp.dll:.Spawner2
 3b7c00f54944fdfebe189ca8e581e025 Assembly-CSharp.dll:.Habilidades
-fb4876731a41cbbcaee1ffc7a1be0c35 Assembly-CSharp.dll:.AparicionHUD
+668276698ba4f298f31b556fbacaca49 Assembly-CSharp.dll:.AparicionHUD
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
-ee962207a847b125f304a4924a2eb2b5 Assembly-CSharp.dll:.MenuPausa
+29e8d381a4e0f89b103efff9152e7520 Assembly-CSharp.dll:.MenuPausa
 c012000683d6af64f46250f3cc7ea492 Assembly-CSharp.dll:.Disparo
 56df1fa7cea034df9863fe5a24200a32 Cinemachine.dll:Cinemachine.CinemachineTargetGroup
 f222d0f98da42b86949a3e9cfd9b4306 Assembly-CSharp.dll:.PantallaDeCarga

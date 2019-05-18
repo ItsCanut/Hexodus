@@ -10,6 +10,7 @@ public class Punto : MonoBehaviour
     public float VidaTorre = 1000f;
     
     public GameObject VidaCast;
+    public GameObject Ayuda;
     Image image;
     
     public Sprite cas1;
@@ -54,6 +55,7 @@ public class Punto : MonoBehaviour
         }
         if (VidaTorre <= 0f)
         {
+            Ayuda.SetActive(false);
             Debug.Log("--VidaTorre al 0%--");
             image.sprite = cas4;
             SceneManager.LoadScene("start");

@@ -10,6 +10,9 @@ public class MenuPausa : MonoBehaviour
     public GameObject menuPausa;        // Menu de opciones cuando el jugador pausa el juego
     public GameObject menuInGame;      // HUD del juego la cual otorga info al jugador
     public GameObject menuGameOver;   // Menu cuando el jugador pierde la partida
+    public GameObject Ayuda;          // Canvas Ayuda entero
+    public GameObject Ayudas;         // Hints
+    public bool isAyuda = false;               
     public bool isPaused;               // Verifica si está o no pausado el juego
     public GameObject personaje;        // Se utiliza para modificar los atributos del personaje al comprar en la tienda
 
@@ -31,13 +34,24 @@ public class MenuPausa : MonoBehaviour
             if (isPaused)
             {                                   // Al dar click en "escape" estando el juego ya parado
                 ResumeGame();
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.visible = false;
+                //Cursor.lockState = CursorLockMode.Locked;
                 Debug.Log("Jugando");
+                if (isAyuda)
+                {
+                    isAyuda = false;
+                    Ayuda.SetActive(true);
+                }
             }
             else {
                 PauseGame();
                 Debug.Log("Juego PARADO");
+                if (Ayuda.active)
+                {
+                    isAyuda = true;
+                    Ayuda.SetActive(false);
+                }
+                
             }
         }
 

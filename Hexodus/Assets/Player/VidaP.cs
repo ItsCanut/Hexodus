@@ -12,6 +12,7 @@ public class VidaP : MonoBehaviour
     public GameObject orico;
     public GameObject Ayuda;
     public GameObject loHierro;
+    public GameObject laPuntuacion;
 
     public GameObject menuMuerte;
 
@@ -21,15 +22,17 @@ public class VidaP : MonoBehaviour
     public int oro = 0;
     public int hierro = 0;
     public int puntuacion = 0;
+
     Text or;
     Text fer;
+    Text punt;
 
     // Start is called before the first frame update
     void Start()
     {
         or = orico.GetComponent<Text>();
         fer = loHierro.GetComponent<Text>();
-       
+        punt = laPuntuacion.GetComponent<Text>();
     }
 
     public void ContarMateriales(int _oro, int _hierro)
@@ -46,6 +49,7 @@ public class VidaP : MonoBehaviour
     public void subirPuntuacion(int _puntuacion)
     {
         puntuacion += _puntuacion;
+        punt.text = puntuacion.ToString();
         Debug.Log("--Puntuacion: " + puntuacion);
     }
 

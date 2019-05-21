@@ -29,14 +29,13 @@ public class VidaIA : MonoBehaviour
 
     public void generarPuntuacion()
     {
-        laPuntuacion = Random.Range(10, 17);
+        laPuntuacion = 5;
     }
     public void AplicarDaño(float amount)
     {
         health -= amount;
         if (health <= 0f)
         {
-
             VidaP losMateriales = elPlayer.GetComponent<VidaP>();
             VidaP lasPuntuaciones = elPlayer.GetComponent<VidaP>();
             losMateriales.ContarMateriales(losOricos, losHierricos);

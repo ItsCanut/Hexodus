@@ -11,18 +11,25 @@ public class VidaIA : MonoBehaviour
 
     public int losOricos;
     public int losHierricos;
+    public int laPuntuacion;
 
     // Start is called before the first frame update
     private void Start()
     {
         elPla = GetComponent<VidaP>();
         generarMateriales();
+        generarPuntuacion();
     }
 
     public void generarMateriales()
     {
         losOricos = Random.Range(4, 10);
         losHierricos = Random.Range(4, 21);
+    }
+
+    public void generarPuntuacion()
+    {
+        laPuntuacion = Random.Range(10, 17);
     }
     public void AplicarDaño(float amount)
     {
@@ -31,7 +38,9 @@ public class VidaIA : MonoBehaviour
         {
 
             VidaP losMateriales = elPlayer.GetComponent<VidaP>();
+            VidaP lasPuntuaciones = elPlayer.GetComponent<VidaP>();
             losMateriales.ContarMateriales(losOricos, losHierricos);
+            lasPuntuaciones.subirPuntuacion(laPuntuacion);
 
             GameObject exp = Instantiate(expl, transform.position, Quaternion.identity);
 

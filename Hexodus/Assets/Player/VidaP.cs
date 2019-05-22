@@ -20,6 +20,7 @@ public class VidaP : MonoBehaviour
 
     public int oro = 0;
     public int hierro = 0;
+    public int puntuacion = 0;
     Text or;
     Text fer;
 
@@ -40,6 +41,12 @@ public class VidaP : MonoBehaviour
         hierro += _hierro;
         fer.text = hierro.ToString();
         Debug.Log("--Tienes " + hierro + " de hierro--");
+    }
+
+    public void subirPuntuacion(int _puntuacion)
+    {
+        puntuacion += _puntuacion;
+        Debug.Log("--Puntuacion: " + puntuacion);
     }
 
     // Update is called once per frame

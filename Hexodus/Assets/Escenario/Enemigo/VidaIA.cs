@@ -29,7 +29,7 @@ public class VidaIA : MonoBehaviour
 
     public void generarPuntuacion()
     {
-        laPuntuacion = 5;
+        laPuntuacion = 1;
     }
     public void AplicarDaño(float amount)
     {

@@ -13,7 +13,6 @@ public class Spawner : MonoBehaviour
     public GameObject robot;
     public int cuantosQuieroSpawnear;
     public GameObject nRonda;
-    public GameObject nRestantes;
     public GameObject boss;
     public GameObject magico;
     int ronda;
@@ -21,9 +20,11 @@ public class Spawner : MonoBehaviour
     float timeTillWave = 0.0f;
     int contWaves;
     int cuantasWaves;
+    int cuantosBoss;
     bool spawn;
     Text restantes;
-    bool spawn1;
+    bool spawnBoss;
+    bool sumaWaves;
 
     void Start()
     {
@@ -32,10 +33,9 @@ public class Spawner : MonoBehaviour
         ronda = 1;
         contWaves = 0;
         spawn = true;
-        spawn1 = true;
-        cuantasWaves = 4;
-        restantes = nRestantes.GetComponent<Text>();
-        restantes.text = (cuantasWaves * cuantosQuieroSpawnear + cuantasWaves + 2 * (cuantosQuieroSpawnear - 1) * cuantasWaves).ToString();
+        spawnBoss = true;
+        cuantasWaves = 1;
+        cuantosBoss = 1;
     }
 
     // Draws a cube to show where the spawn point is... Useful if you don't have a object that show the spawn point
@@ -53,15 +53,13 @@ public class Spawner : MonoBehaviour
         Text text = nRonda.GetComponent<Text>();
         
         
-        if( contWaves >= cuantasWaves && enemigosRestantes.Equals(1) )
+        if( contWaves >= cuantasWaves && enemigosRestantes.Equals(2) )
         {
             ronda++;
             contWaves = 0;
             spawn = true;
-            cuantasWaves++;
-            spawn1 = true;
-            cuantosQuieroSpawnear++;
-            restantes.text = (cuantasWaves * cuantosQuieroSpawnear + cuantasWaves + 2 * (cuantosQuieroSpawnear - 1)).ToString();
+            spawnBoss = true;
+            sumaWaves = true;
         }
 
 
@@ -91,10 +89,17 @@ public class Spawner : MonoBehaviour
         {
             spawnEnemy(robot, cuantosQuieroSpawnear);
             spawnEnemy(magico, 1);
-            if(ronda % 2 == 0 && spawn1)
+            if(ronda % 5 == 0 && spawnBoss)
             {
-                spawnEnemy(boss, 1);
-                spawn1 = false;
+                spawnEnemy(boss, cuantosBoss);
+                spawnBoss = false;
+                cuantosBoss++;
+            }
+            if( ronda % 2 == 0 && sumaWaves == true)
+            {
+                sumaWaves = false;
+                cuantosQuieroSpawnear++;
+                cuantasWaves++;
             }
             contWaves++;
             timeTillWave = 0.0f;

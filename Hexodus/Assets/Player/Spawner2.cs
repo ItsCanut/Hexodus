@@ -13,11 +13,12 @@ public class Spawner2 : MonoBehaviour
     public GameObject robot;
     public int cuantosQuieroSpawnear;
     int ronda;
-    float waveTimer = 5.0f;
+    float waveTimer = 7.0f;
     float timeTillWave = 0.0f;
     int contWaves;
     int cuantasWaves;
     bool spawn;
+    bool sumaWaves;
    
 
     void Start()
@@ -27,7 +28,7 @@ public class Spawner2 : MonoBehaviour
         ronda = 1;
         contWaves = 0;
         spawn = true;
-        cuantasWaves = 4;
+        cuantasWaves = 1;
     }
 
     // Draws a cube to show where the spawn point is... Useful if you don't have a object that show the spawn point
@@ -48,8 +49,7 @@ public class Spawner2 : MonoBehaviour
             ronda++;
             contWaves = 0;
             spawn = true;
-            cuantasWaves++;
-            cuantosQuieroSpawnear++;
+            sumaWaves = true;
         }
 
         if (contWaves < cuantasWaves && spawn)
@@ -76,6 +76,12 @@ public class Spawner2 : MonoBehaviour
             spawnEnemy(robot, cuantosQuieroSpawnear);
             contWaves++;
             timeTillWave = 0.0f;
+        }
+        if (ronda % 2 == 0 && sumaWaves == true)
+        {
+            sumaWaves = false;
+            cuantosQuieroSpawnear++;
+            cuantasWaves++;
         }
 
     }

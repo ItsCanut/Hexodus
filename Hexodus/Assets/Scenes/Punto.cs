@@ -19,9 +19,12 @@ public class Punto : MonoBehaviour
     public Sprite cas4;
     public GameObject expl;
 
+
     void Update()
     {
         image = VidaCast.GetComponent<Image>();
+
+       
     }
     public void AplicarDañoTorre(float amount)
     {
@@ -55,6 +58,7 @@ public class Punto : MonoBehaviour
         }
         if (VidaTorre <= 0f)
         {
+
             Ayuda.SetActive(false);
             Debug.Log("--VidaTorre al 0%--");
             image.sprite = cas4;

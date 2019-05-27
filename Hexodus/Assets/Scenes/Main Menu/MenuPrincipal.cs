@@ -2,18 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuPrincipal : MonoBehaviour
 {
 
     public GameObject menuOpciones;             // Menu para editar las opciones del juego
     public GameObject menuPrincipal;            // Menu para acceder al juego, acceder a las opciones y salir del juego
+    public GameObject laPuntuacion;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 1f;
+        int punt = PlayerPrefs.GetInt("Puntuacion");
+        Debug.Log(punt);
+
+        Text puntuacion = laPuntuacion.GetComponent<Text>();
+        puntuacion.text = PlayerPrefs.GetInt("Puntuacion").ToString();
     }
 
     // -------------------------------------------------------------------------

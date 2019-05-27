@@ -23,6 +23,10 @@ public class VidaP : MonoBehaviour
     public int hierro = 0;
     public int puntuacion = 0;
 
+    int puntGuardada;
+    bool guardarPunt;
+    bool cont;
+
     Text or;
     Text fer;
     Text punt;
@@ -33,6 +37,26 @@ public class VidaP : MonoBehaviour
         or = orico.GetComponent<Text>();
         fer = loHierro.GetComponent<Text>();
         punt = laPuntuacion.GetComponent<Text>();
+        puntGuardada = PlayerPrefs.GetInt("Puntuacion");
+        guardarPunt = false;
+        cont = false;
+    }
+
+    private void Update()
+    {
+        if(puntGuardada < puntuacion && cont == false)
+        {
+            guardarPunt = true;
+        }
+
+        if( guardarPunt)
+        {
+            PlayerPrefs.SetInt("Puntuacion", puntuacion);
+            Debug.Log("Se ha cambiado la puntuacion");
+            PlayerPrefs.Save();
+            guardarPunt = false;
+            cont = true;
+        }
     }
 
     public void ContarMateriales(int _oro, int _hierro)
@@ -84,6 +108,7 @@ public class VidaP : MonoBehaviour
 
         if (vida <=0f)
         {
+
             Ayuda.SetActive(false);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;

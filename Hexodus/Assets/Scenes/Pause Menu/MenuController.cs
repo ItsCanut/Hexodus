@@ -11,7 +11,6 @@ public class MenuController : MonoBehaviour
     public GameObject Ayudas;
     public bool isPaused;
 
-    
 
     // Update is called once per frame
     void Update()

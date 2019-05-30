@@ -3,7 +3,12 @@ guid: fc1126f0f8e433d46b8071ec8d3aaa4a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pauseMenu: {instanceID: 0}
+  - Ayuda: {instanceID: 0}
+  - Ayudas: {instanceID: 0}
+  - caminarBasico: {fileID: 8300000, guid: 0abc6da0110eb0a4785e097c10c48369, type: 3}
+  - caminarMagico: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

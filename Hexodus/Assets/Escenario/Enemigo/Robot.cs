@@ -34,6 +34,11 @@ public class Robot : MonoBehaviour
     public Punto VidaTorre;
 
 
+    public AudioClip sonidoCaminar;
+    public AudioSource aS;
+
+
+
     //--estados del enemigo
     public enum EstadosRobot
     {
@@ -68,6 +73,10 @@ public class Robot : MonoBehaviour
         
         objetivo = GameObject.Find("Personaje_1");
         VidaTorre = GetComponent<Punto>();
+
+        aS.clip = sonidoCaminar;
+        aS.Play();
+
     }//fin start
 
     // Update is called once per frame

@@ -10,6 +10,7 @@ public class MenuController : MonoBehaviour
     public GameObject Ayuda;
     public GameObject Ayudas;
     public bool isPaused;
+    public Transform robot;
 
 
     // Update is called once per frame
@@ -25,6 +26,8 @@ public class MenuController : MonoBehaviour
             }
             else
             {
+                Robot robott = robot.GetComponent<Robot>();
+                robott.aS.Pause();
                 Cursor.lockState = CursorLockMode.Locked;
                 isPaused = true;
                 pauseMenu.SetActive(true);

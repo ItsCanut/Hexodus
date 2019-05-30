@@ -15,6 +15,8 @@ public class MenuPausa : MonoBehaviour
     public bool isAyuda = false;               
     public bool isPaused;               // Verifica si está o no pausado el juego
     public GameObject personaje;        // Se utiliza para modificar los atributos del personaje al comprar en la tienda
+    public Transform robot;
+    public Transform robotm;
 
     private bool tiendaAbierta;
 
@@ -44,7 +46,8 @@ public class MenuPausa : MonoBehaviour
                 }
             }
             else {
-                PauseGame();
+                
+                PauseGame();                
                 Debug.Log("Juego PARADO");
                 if (Ayuda.active)
                 {
@@ -76,7 +79,7 @@ public class MenuPausa : MonoBehaviour
 
 
     public void PauseGame()
-    {
+    {        
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -85,6 +88,10 @@ public class MenuPausa : MonoBehaviour
         menuTienda.gameObject.SetActive(false);
         menuPausa.gameObject.SetActive(true);
         Time.timeScale = 0f;        // Speed time runs (frozen)
+        Robot robott = robot.GetComponent<Robot>();
+        robott.aS.Pause(); //no va
+        Robot robottm = robotm.GetComponent<Robot>();
+        robottm.aS.Pause(); //no va
     }
 
 

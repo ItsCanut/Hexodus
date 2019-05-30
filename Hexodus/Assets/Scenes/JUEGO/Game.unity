@@ -1078,7 +1078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &53465685
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17840,6 +17840,14 @@ PrefabInstance:
       propertyPath: jumpHeight
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 68667173, guid: 8b46921067579d0459a1753fbf57845b, type: 3}
+      propertyPath: aS
+      value: 
+      objectReference: {fileID: 969296746}
+    - target: {fileID: 68667173, guid: 8b46921067579d0459a1753fbf57845b, type: 3}
+      propertyPath: aC
+      value: 
+      objectReference: {fileID: 8300000, guid: fdaa70a1512735a49a19dfde6e7b79fd, type: 3}
     - target: {fileID: 987382712, guid: 8b46921067579d0459a1753fbf57845b, type: 3}
       propertyPath: m_Icon
       value: 

@@ -19,7 +19,9 @@ public class Movimiento_Player : MonoBehaviour
     private Rigidbody rb;
 
     public float dashSpeed;
-
+    
+    public AudioSource aS;
+    public AudioClip aC;
 
 
     // Start is called before the first frame update
@@ -28,6 +30,7 @@ public class Movimiento_Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         inFloor = true;
         StartCoroutine(Tiempo());
+        aS.clip = aC;
     }
 
     IEnumerator Tiempo()
@@ -65,6 +68,7 @@ public class Movimiento_Player : MonoBehaviour
         }
         else { 
         transform.Translate(movimiento * (Time.deltaTime * velocidad));
+            aS.Play();
         }
     }
 

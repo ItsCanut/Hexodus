@@ -5,11 +5,11 @@ using UnityEngine;
 public class BulletIA : MonoBehaviour
 {
     public float daño = 5f;
+    public Transform CamaraShake;
 
     private void OnCollisionEnter(Collision collision)
     {
-        collision.transform.SendMessage("AplicarDano", daño, SendMessageOptions.DontRequireReceiver);
-
+        collision.transform.SendMessage("AplicarDano", daño, SendMessageOptions.DontRequireReceiver); 
         Destroy(this.gameObject);
     }
 }

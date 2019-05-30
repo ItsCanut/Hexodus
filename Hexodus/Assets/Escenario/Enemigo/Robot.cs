@@ -68,6 +68,8 @@ public class Robot : MonoBehaviour
         
         objetivo = GameObject.Find("Personaje_1");
         VidaTorre = GetComponent<Punto>();
+
+
     }//fin start
 
     // Update is called once per frame

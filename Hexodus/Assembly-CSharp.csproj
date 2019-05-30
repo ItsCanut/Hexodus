@@ -81,6 +81,7 @@
      <Compile Include="Assets\Player\Spawner2.cs" />
      <Compile Include="Assets\Player\VidaP.cs" />
      <Compile Include="Assets\PolarizedPlatformPack\Demo\Scripts\ViewDrag.cs" />
+     <Compile Include="Assets\Scenes\JUEGO\CameraShake.cs" />
      <Compile Include="Assets\Scenes\JUEGO\MenuPausa.cs" />
      <Compile Include="Assets\Scenes\JUEGO\Tienda\BtnMejora.cs" />
      <Compile Include="Assets\Scenes\JUEGO\Tienda\Mejoras.cs" />

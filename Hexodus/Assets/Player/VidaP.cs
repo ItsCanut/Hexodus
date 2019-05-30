@@ -13,6 +13,7 @@ public class VidaP : MonoBehaviour
     public GameObject Ayuda;
     public GameObject loHierro;
     public GameObject laPuntuacion;
+    public GameObject losOrbesitos;
 
     public GameObject menuMuerte;
 
@@ -22,6 +23,7 @@ public class VidaP : MonoBehaviour
     public int oro = 0;
     public int hierro = 0;
     public int puntuacion = 0;
+    public int orbesitos = 0;
 
     public CameraShake camara;
     public Transform laCamara;
@@ -31,6 +33,7 @@ public class VidaP : MonoBehaviour
     bool cont;
 
     Text or;
+    Text orb;
     Text fer;
     Text punt;
 
@@ -39,6 +42,7 @@ public class VidaP : MonoBehaviour
     {
         or = orico.GetComponent<Text>();
         fer = loHierro.GetComponent<Text>();
+        orb = losOrbesitos.GetComponent<Text>();
         punt = laPuntuacion.GetComponent<Text>();
         puntGuardada = PlayerPrefs.GetInt("Puntuacion");
         guardarPunt = false;
@@ -56,6 +60,13 @@ public class VidaP : MonoBehaviour
 
         }
         
+    }
+
+    public void ContarOrbes( int _orbes)
+    {
+        orbesitos += _orbes;
+        Debug.Log(orbesitos);
+        orb.text = orbesitos.ToString();
     }
 
     public void ContarMateriales(int _oro, int _hierro)

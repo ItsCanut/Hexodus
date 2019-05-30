@@ -42,21 +42,16 @@ public class VidaP : MonoBehaviour
         cont = false;
     }
 
-    private void Update()
+    void Update()
     {
-        if(puntGuardada < puntuacion && cont == false)
-        {
-            guardarPunt = true;
-        }
 
-        if( guardarPunt)
+        if (puntuacion > PlayerPrefs.GetInt("Puntuacion"))
         {
             PlayerPrefs.SetInt("Puntuacion", puntuacion);
             Debug.Log("Se ha cambiado la puntuacion");
             PlayerPrefs.Save();
-            guardarPunt = false;
-            cont = true;
         }
+        
     }
 
     public void ContarMateriales(int _oro, int _hierro)

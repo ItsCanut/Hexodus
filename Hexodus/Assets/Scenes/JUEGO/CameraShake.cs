@@ -19,6 +19,11 @@ public class CameraShake : MonoBehaviour
 
     Vector3 originalPos;
 
+    private void Start()
+    {
+        
+    }
+
     void Awake()
     {
         if (camTransform == null)

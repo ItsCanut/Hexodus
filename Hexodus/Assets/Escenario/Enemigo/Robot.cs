@@ -7,14 +7,14 @@ public class Robot : MonoBehaviour
 {
     //--disparo enemigo
     public float speedBullet = 1000f;
-    public int Dano = 5;   
+    public int Dano = 5;
     public float shootRate = 1f;
     private float m_shootRateTimeStamp;
 
     public static Robot instace;
     public int CurrentScore;
 
-    
+
 
     public Transform posi;
     public Rigidbody bullet;
@@ -25,13 +25,18 @@ public class Robot : MonoBehaviour
     public GameObject efecto;
 
     //--caracteristicas y posicionamiento enemigo
-    public Transform punto;   
+    public Transform punto;
     public Transform player;
     GameObject objetivo;
     public Transform cabeza;
     private static NavMeshAgent agente;
     public float speed = 5f;
     public Punto VidaTorre;
+
+
+   // public AudioClip sonidoCaminar;
+   // public AudioSource aS;
+
 
 
     //--estados del enemigo
@@ -52,7 +57,7 @@ public class Robot : MonoBehaviour
             _estado = value;
             if (_estado == EstadosRobot.Patrulla)
             {
-                agente.destination = punto.transform.position;               
+                agente.destination = punto.transform.position;
             }
         }
     }
@@ -61,28 +66,30 @@ public class Robot : MonoBehaviour
     void Start()
     {
         bool congAct = gameObject.GetComponent<CaracteristicasHielo>();
-        agente = GetComponent<NavMeshAgent>();       
+        agente = GetComponent<NavMeshAgent>();
         agente.destination = punto.transform.position;
 
         instace = this;
-        
+
         objetivo = GameObject.Find("Personaje_1");
         VidaTorre = GetComponent<Punto>();
 
+        //aS.clip = sonidoCaminar;
+        //aS.Play();
 
     }//fin start
 
     // Update is called once per frame
     void Update()
     {
-        
+
         switch (Estado)
         {
             case EstadosRobot.Patrulla:
-               
-                    agente.speed = 8f;
-                  
-                
+
+                agente.speed = 8f;
+
+
                 efecto.SetActive(false);
 
                 if (Vector3.Distance(transform.position, player.position) < distanciaAtaque)
@@ -93,10 +100,10 @@ public class Robot : MonoBehaviour
 
             case EstadosRobot.Ataque:
 
-               
-                    agente.speed = 5f;
-                
-               
+
+                agente.speed = 5f;
+
+
 
                 if (Vector3.Distance(transform.position, player.position) > distanciaAtaque)
                 {
@@ -117,41 +124,25 @@ public class Robot : MonoBehaviour
         if (Vector3.Distance(transform.position, agente.destination) <= 3f)
         {
             Destroy(gameObject);
-            
+
             float dañoso = 75f;
             Punto puntoTorre = punto.GetComponent<Punto>();
             puntoTorre.AplicarDañoTorre(dañoso);
         }
 
     } //fin update
-
-    public void aplicarHielo(bool act)
-    {
-
-        if (act == true)
-        {
-            Debug.Log("--Es TRUE");
-            agente.speed = 0.1f;
-
-        }
-        
-
-
-    }
-   
-
     void FX()
     {
         efecto.SetActive(false);
     }
     void Shoot()
     {
-       
+
         //transform.GetComponent<AudioSource>().PlayOneShot(AudioDisparo);       
         if (Time.time > m_shootRateTimeStamp)
         {
             efecto.SetActive(true);
-            Invoke("FX",0.5f);
+            Invoke("FX", 0.5f);
             var cloneBullet = Instantiate(bullet, posi.position, posi.rotation);
             cloneBullet.velocity = cabeza.TransformDirection(new Vector3(0, -speedBullet, 0));
             m_shootRateTimeStamp = Time.time + shootRate;

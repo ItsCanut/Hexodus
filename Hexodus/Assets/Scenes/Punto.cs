@@ -19,6 +19,9 @@ public class Punto : MonoBehaviour
     public Sprite cas4;
     public GameObject expl;
 
+    public CameraShake laCamareta;
+    public Transform laPutaCamareta;
+
 
     void Update()
     {
@@ -28,7 +31,11 @@ public class Punto : MonoBehaviour
     }
     public void AplicarDañoTorre(float amount)
     {
-
+        CameraShake a = laPutaCamareta.GetComponent<CameraShake>();
+        Debug.Log("Shake camera...");
+        a.shakeDuration = 0.5f;
+        a.shakeAmount = 0.7f;
+        a.shakecamera();
 
         VidaTorre -= amount;
 

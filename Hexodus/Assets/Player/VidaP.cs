@@ -23,10 +23,12 @@ public class VidaP : MonoBehaviour
     public int hierro = 0;
     public int puntuacion = 0;
 
+    public CameraShake camara;
+    public Transform laCamara;
+
     int puntGuardada;
     bool guardarPunt;
     bool cont;
-    public Transform camara;
 
     Text or;
     Text fer;
@@ -51,6 +53,7 @@ public class VidaP : MonoBehaviour
             PlayerPrefs.SetInt("Puntuacion", puntuacion);
             Debug.Log("Se ha cambiado la puntuacion");
             PlayerPrefs.Save();
+
         }
         
     }
@@ -77,16 +80,20 @@ public class VidaP : MonoBehaviour
   public void AplicarDano(float dano)
     {
 
-        
+        //camara = GetComponent<CameraShake>();
+        CameraShake a = laCamara.GetComponent<CameraShake>();
+        Debug.Log("Shake camera...");
+        a.shakeDuration = 0.1f;
+        a.shakeAmount = 0.25f;
+        a.shakecamera();
+
         vida -= dano;
         HealthBar.fillAmount = vida/1000;
 
-        
+
         if (HealthBar.fillAmount<= 0.5)
         {
             HealthBar.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);
-            CameraShake a = camara.GetComponent<CameraShake>();
-            a.shakecamera();
         }
 
         if (HealthBar.fillAmount <= 0.35)

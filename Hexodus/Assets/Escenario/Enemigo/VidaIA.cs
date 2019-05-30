@@ -47,6 +47,7 @@ public class VidaIA : MonoBehaviour
             Destroy(this.gameObject);
 
             Destroy(exp, 1f);
+
         }
     }
 }

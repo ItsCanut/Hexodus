@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -111,7 +111,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 8bbc2c42c351c9f4a967f04da26a7737, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 6106be0cff399ba419c1bf6bd50b6656, type: 2}
 --- !u!4 &210450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: acd11196bdf50d64c92017d0e8a994d1,
@@ -433,7 +433,7 @@ MonoBehaviour:
   player: {fileID: 1654646605}
   cabeza: {fileID: 68761562}
   speed: 50
-  VidaTorre: {fileID: 938843605}
+  VidaTorre: {fileID: 143443129}
 --- !u!114 &38598591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +452,7 @@ MonoBehaviour:
   expl: {fileID: 1329845292236604, guid: c49b438c9cff8ff48a3cb2054acf7636, type: 3}
   losOricos: 0
   losHierricos: 0
+  laPuntuacion: 0
 --- !u!195 &38598592
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3996,7 +3997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: de667a6e2b25aa4458603238ffc9aa07, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 66.57
+      value: 69.07
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: de667a6e2b25aa4458603238ffc9aa07, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4833,7 +4834,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666451567}
   m_LocalRotation: {x: 0.9999743, y: -0, z: -0, w: -0.0071732393}
-  m_LocalPosition: {x: 0.007, y: -0.596, z: 0.698}
+  m_LocalPosition: {x: 0.007, y: -1.06, z: 0.7}
   m_LocalScale: {x: 0.65586, y: 0.6558604, z: 0.6558604}
   m_Children: []
   m_Father: {fileID: 68761562}
@@ -5818,6 +5819,7 @@ MonoBehaviour:
   expl: {fileID: 1329845292236604, guid: c49b438c9cff8ff48a3cb2054acf7636, type: 3}
   losOricos: 0
   losHierricos: 0
+  laPuntuacion: 0
 --- !u!114 &792216076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5842,7 +5844,7 @@ MonoBehaviour:
   player: {fileID: 1654646605}
   cabeza: {fileID: 1082124334}
   speed: 50
-  VidaTorre: {fileID: 938843605}
+  VidaTorre: {fileID: 143443129}
 --- !u!135 &792216079
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7271,6 +7273,7 @@ MonoBehaviour:
   RecVida: 5
   oro: 0
   hierro: 0
+  puntuacion: 0
 --- !u!95 &969296743
 Animator:
   serializedVersion: 3
@@ -10547,6 +10550,7 @@ MonoBehaviour:
   expl: {fileID: 0}
   losOricos: 0
   losHierricos: 0
+  laPuntuacion: 0
 --- !u!195 &1570279945
 NavMeshAgent:
   m_ObjectHideFlags: 0

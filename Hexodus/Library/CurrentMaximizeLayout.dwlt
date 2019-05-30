@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 679, y: 474}
-  m_MaxSize: {x: 14000, y: 14024}
+  m_MinSize: {x: 683, y: 498}
+  m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 3546
+  controlID: 107
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,10 +126,10 @@ MonoBehaviour:
     y: 0
     width: 1221
     height: 731
-  m_MinSize: {x: 404, y: 474}
-  m_MaxSize: {x: 10000, y: 14024}
+  m_MinSize: {x: 406, y: 498}
+  m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 3547
+  controlID: 108
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -151,10 +151,10 @@ MonoBehaviour:
     y: 0
     width: 1221
     height: 457
-  m_MinSize: {x: 404, y: 224}
-  m_MaxSize: {x: 8004, y: 4024}
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 3513
+  controlID: 73
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,8 +174,8 @@ MonoBehaviour:
     y: 0
     width: 229
     height: 457
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -209,10 +209,10 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 600}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 14e8ffff6af9ffffd4fbffff06160000bc16000030170000a8180000c6180000
+      m_ExpandedIDs: d4fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -389,8 +389,8 @@ MonoBehaviour:
     y: 457
     width: 1221
     height: 274
-  m_MinSize: {x: 232, y: 274}
-  m_MaxSize: {x: 10002, y: 10024}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -437,20 +437,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Escenario/Enemigo/explosion robot
+    - Assets/Player
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Escenario/Enemigo/explosion robot
+  - Assets/Player
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Usuario\Desktop\proyecto videojuego\juego en si\GitHub\Hexodus\Hexodus
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 67}
-    m_SelectedIDs: 2e130000
-    m_LastClickedID: 4910
-    m_ExpandedIDs: 00000000be0b0000220c0000380c0000ea0d00008a0f00005c100000941000001a1100000a120000421200006c1200007e12000018130000301300004813000070130000d43c0000d63c0000d83c0000da3c0000dc3c0000de3c0000e03c0000e23c000000ca9a3b
+    scrollPos: {x: 0, y: 307}
+    m_SelectedIDs: 80130000
+    m_LastClickedID: 4992
+    m_ExpandedIDs: 00000000be0b0000220c0000380c0000ea0d0000c20f000094100000cc10000052110000421200007a120000a4120000b6120000501300006813000080130000a8130000643d0000663d0000683d00006a3d00006c3d00006e3d0000703d0000723d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -478,7 +478,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000be0b0000220c0000380c0000ea0d00008a0f00005c100000941000001a1100000a120000421200006c1200007e12000018130000301300004813000070130000d43c0000d63c0000d83c0000da3c0000dc3c0000de3c0000e03c0000e23c000000ca9a3b
+    m_ExpandedIDs: 00000000be0b0000220c0000380c0000ea0d0000c20f000094100000cc10000052110000421200007a120000a4120000b6120000501300006813000080130000a8130000643d0000663d0000683d00006a3d00006c3d00006e3d0000703d0000723d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -503,9 +503,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: e8150000
-    m_LastClickedInstanceID: 5608
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 52170000
+    m_LastClickedInstanceID: 5970
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000a45e0000705e0000b05e0000945e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 5608
+  m_LastSelectedObjectID: 5970
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -647,8 +647,8 @@ MonoBehaviour:
     y: 0
     width: 315
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}

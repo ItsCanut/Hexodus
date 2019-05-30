@@ -17,6 +17,7 @@ public class Movimiento_Player : MonoBehaviour
     public float jumpHeight = 7f;
 
     private Rigidbody rb;
+    public float dashSpeed;
 
 
 
@@ -34,17 +35,31 @@ public class Movimiento_Player : MonoBehaviour
         velocidad=11f;
     }
 
+    IEnumerator Tiempo2()
+    {
+        yield return new WaitForSeconds(0.4f);
+        velocidad = 11f;
+    }
+
     // Update is called once per frame
     void Update()
     {
 
         bool shiftPulsado = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
-
+        bool isDashingW = Input.GetKey(KeyCode.LeftAlt);
         Vector3 movimiento = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         if (shiftPulsado)
         {
             transform.Translate(movimiento * (Time.deltaTime * caminar));
+        }
+        if (isDashingW)
+        {
+            dashSpeed = 6f;
+            velocidad = velocidad + dashSpeed;
+            StartCoroutine(Tiempo2());
+
+
         }
         else { 
         transform.Translate(movimiento * (Time.deltaTime * velocidad));

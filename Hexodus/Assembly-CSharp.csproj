@@ -64,6 +64,7 @@
     <Compile Include="Assets\Escenario\Enemigo\Boss\BossMini1.cs" />
     <Compile Include="Assets\Escenario\Enemigo\Boss\VidaBoss.cs" />
     <Compile Include="Assets\Escenario\Enemigo\BulletIA.cs" />
+    <Compile Include="Assets\Escenario\Enemigo\enemigo Magico\RobotM.cs" />
     <Compile Include="Assets\Escenario\Enemigo\Robot.cs" />
     <Compile Include="Assets\Escenario\Enemigo\TestRobot.cs" />
     <Compile Include="Assets\Escenario\Enemigo\VidaIA.cs" />

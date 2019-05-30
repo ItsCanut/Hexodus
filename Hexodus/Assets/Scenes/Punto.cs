@@ -22,6 +22,15 @@ public class Punto : MonoBehaviour
     public CameraShake laCamareta;
     public Transform laPutaCamareta;
 
+    public AudioClip explosion;
+    public AudioSource eplosionOriginal;
+
+
+
+    void Start()
+    {
+        eplosionOriginal.clip = explosion;
+    }
 
     void Update()
     {
@@ -31,6 +40,8 @@ public class Punto : MonoBehaviour
     }
     public void AplicarDañoTorre(float amount)
     {
+
+        eplosionOriginal.Play();
         CameraShake a = laPutaCamareta.GetComponent<CameraShake>();
         Debug.Log("Shake camera...");
         a.shakeDuration = 0.5f;

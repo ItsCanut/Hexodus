@@ -44,7 +44,7 @@ public class Spawner2 : MonoBehaviour
     {
         int enemigosRestantes = GameObject.FindGameObjectsWithTag("Enemigo").Length; // devuelve el numero de robots que hay en el mapa
 
-        if (contWaves >= cuantasWaves && enemigosRestantes.Equals(2))
+        if (contWaves >= cuantasWaves && enemigosRestantes.Equals(3))
         {
             ronda++;
             contWaves = 0;

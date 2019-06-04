@@ -12,9 +12,11 @@ public class MenuPausa : MonoBehaviour
     public GameObject menuGameOver;   // Menu cuando el jugador pierde la partida
     public GameObject Ayuda;          // Canvas Ayuda entero
     public GameObject Ayudas;         // Hints
-    public bool isAyuda = false;               
+    public bool isAyuda = false;
     public bool isPaused;               // Verifica si está o no pausado el juego
     public GameObject personaje;        // Se utiliza para modificar los atributos del personaje al comprar en la tienda
+
+    public Camera_Control cameraControl;
 
     private bool tiendaAbierta;
 
@@ -30,7 +32,7 @@ public class MenuPausa : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {                                       // al dar click en la tecla "escape"
-            
+
             if (isPaused)
             {                                   // Al dar click en "escape" estando el juego ya parado
                 ResumeGame();
@@ -43,7 +45,8 @@ public class MenuPausa : MonoBehaviour
                     Ayuda.SetActive(true);
                 }
             }
-            else {
+            else
+            {
                 PauseGame();
                 Debug.Log("Juego PARADO");
                 if (Ayuda.active)
@@ -51,7 +54,7 @@ public class MenuPausa : MonoBehaviour
                     isAyuda = true;
                     Ayuda.SetActive(false);
                 }
-                
+
             }
         }
 
@@ -96,7 +99,7 @@ public class MenuPausa : MonoBehaviour
     // --------------------------- Cierra el menu de pausa y vuelve a la partida donde se dejó ---
 
 
-    public void ResumeGame()                   
+    public void ResumeGame()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -139,6 +142,7 @@ public class MenuPausa : MonoBehaviour
         menuPausa.gameObject.SetActive(false);
         menuGameOver.gameObject.SetActive(false);
         personaje.GetComponent<Camera_Control>().enabled = false;
+
     }
 
     // Cierra la pestaña de tienda

@@ -11,7 +11,6 @@ public class BtnMejora : MonoBehaviour
     private string nombreMejora;
     private string descripcionMejora;
     private double precioMejora;
-    public double Puntuacion;
     public Text textoPuntuacion;
 
     public Text nombreInspector;
@@ -29,17 +28,28 @@ public class BtnMejora : MonoBehaviour
     private int velocidad;
     private int danyo;
     private int vida;
+    public double oro;     // Oro para comprar mejoras
+
+    public AudioSource sonidoCompra;
+
+    private string mejoraSeleccionada;
+
 
     private void Start()
     {
-        Puntuacion = 1000;
-        textoPuntuacion.text = Puntuacion.ToString();
+
         velocidad = 0;
         vida = 0;
         danyo = 0;
+        oro = 45;
+        textoPuntuacion.text = oro.ToString();
+
     }
+
     private void Update()
     {
+
+
         MejoraA_1.onClick.AddListener(delegate { EditarInspector(MejoraA_1.GetComponent<Mejoras>().GetNombre(), MejoraA_1.GetComponent<Mejoras>().GetDescripcion(), MejoraA_1.GetComponent<Mejoras>().GetPrecio(), MejoraA_1.GetComponent<Mejoras>().GetIndex()); });
         MejoraA_2.onClick.AddListener(delegate { EditarInspector(MejoraA_2.GetComponent<Mejoras>().GetNombre(), MejoraA_2.GetComponent<Mejoras>().GetDescripcion(), MejoraA_2.GetComponent<Mejoras>().GetPrecio(), MejoraA_2.GetComponent<Mejoras>().GetIndex()); });
         MejoraA_3.onClick.AddListener(delegate { EditarInspector(MejoraA_3.GetComponent<Mejoras>().GetNombre(), MejoraA_3.GetComponent<Mejoras>().GetDescripcion(), MejoraA_3.GetComponent<Mejoras>().GetPrecio(), MejoraA_3.GetComponent<Mejoras>().GetIndex()); });
@@ -53,11 +63,11 @@ public class BtnMejora : MonoBehaviour
         MejoraC_3.onClick.AddListener(delegate { EditarInspector(MejoraC_3.GetComponent<Mejoras>().GetNombre(), MejoraC_3.GetComponent<Mejoras>().GetDescripcion(), MejoraC_3.GetComponent<Mejoras>().GetPrecio(), MejoraC_3.GetComponent<Mejoras>().GetIndex()); });
 
 
-
         // -------------- MEJORAS DE VELOCIDAD DE MOVIMIENTO ---------------------
         if (velocidad.Equals(1))
         {
-            player.GetComponent<Movimiento_Player>().velocidad = player.GetComponent<Movimiento_Player>().velocidad + 1f;
+            player.GetComponent<Movimiento_Player>().velocidad = player.GetComponent<Movimiento_Player>().velocidad + 0.1f;
+            Debug.Log("VELOCIDAD AUMENTADA");
         }
         if (velocidad.Equals(2))
         {
@@ -72,6 +82,7 @@ public class BtnMejora : MonoBehaviour
         if (vida.Equals(1))
         {
             player.GetComponent<VidaP>().vida = player.GetComponent<VidaP>().vida + 50f;
+            Debug.Log("VIDA AUMENTADA");
         }
         if (vida.Equals(2))
         {
@@ -95,46 +106,80 @@ public class BtnMejora : MonoBehaviour
         {
             player.GetComponent<BulletHit>().daño = player.GetComponent<BulletHit>().daño + 10;
         }
+
+        oro = GetComponent<VidaP>().oro;
+        textoPuntuacion.text = oro.ToString();
     }
 
 
     // --- Actualiza los valores del inspector en base a que mejora se ha seleccionado ---
-    void EditarInspector(string nombre,string descripcion,double precio,int index)
+    void EditarInspector(string nombre, string descripcion, double precio, int index)
     {
-         nombreInspector.text = nombre.ToString();
-         descripcionInspector.text = descripcion.ToString();
+
+        nombreInspector.text = nombre.ToString();
+        descripcionInspector.text = descripcion.ToString();
 
 
-        if(Puntuacion - precio < 0)
+
+
+        if (oro - precio <= 0)
         {
             PrecioObjeto = precio;
             precioInspector.text = "Precio: " + precio.ToString();
             precioInspector.color = Color.red;
         }
-        else
+        if (oro - precio > 0)
         {
             PrecioObjeto = precio;
             precioInspector.text = "Precio: " + precio.ToString();
+            precioInspector.color = Color.white;
         }
-        
 
-        
+        if (index == 1)
+        {
+            mejoraSeleccionada = "danyo";
+        }
+        if (index == 2)
+        {
+            mejoraSeleccionada = "vida";
+        }
+        if (index == 3)
+        {
+            mejoraSeleccionada = "velocidad";
+        }
+
     }
 
     public void Comprar()
     {
 
-        if (Puntuacion - PrecioObjeto < 0)
+
+        if (oro - PrecioObjeto < 0)
         {
             Debug.Log("NO HAY SUFICIENTE DINERO");
         }
         else
         {
-            Puntuacion = Puntuacion - PrecioObjeto;
-            textoPuntuacion.text = Puntuacion.ToString();
-            velocidad = velocidad + 1;
-            danyo = danyo + 1;
-          //  vida = vida + 1;
+            sonidoCompra.Play();
+            oro = oro - PrecioObjeto;
+            textoPuntuacion.text = oro.ToString();
+
+            if (mejoraSeleccionada == "vida")
+            {
+                vida = vida + 1;
+            }
+            if (mejoraSeleccionada == "danyo")
+            {
+                danyo = danyo + 1;
+            }
+            if (mejoraSeleccionada == "velocidad")
+            {
+                velocidad = velocidad + 1;
+            }
+
+            // velocidad = velocidad + 1;
+            //  danyo = danyo + 1;
+            //  vida = vida + 1;
         }
 
     }

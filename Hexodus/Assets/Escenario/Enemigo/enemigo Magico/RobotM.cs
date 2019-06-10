@@ -144,7 +144,7 @@ public class RobotM : MonoBehaviour
             efecto.SetActive(true);
             Invoke("FX", 0.5f);
             var cloneBullet = Instantiate(bullet, posi.position, posi.rotation);
-            cloneBullet.velocity = transform.TransformDirection(new Vector3(0, -speedBullet, 0));
+            cloneBullet.velocity = transform.TransformDirection(new Vector3(0, 0, speedBullet));
             m_shootRateTimeStamp = Time.time + shootRate;
         }
     }

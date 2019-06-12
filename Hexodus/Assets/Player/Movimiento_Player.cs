@@ -19,6 +19,8 @@ public class Movimiento_Player : MonoBehaviour
     private Rigidbody rb;
     public float dashSpeed;
 
+    public AudioSource Pasos;
+
 
 
     // Start is called before the first frame update
@@ -63,6 +65,16 @@ public class Movimiento_Player : MonoBehaviour
         }
         else { 
         transform.Translate(movimiento * (Time.deltaTime * velocidad));
+
+            if ((Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) && !Pasos.isPlaying)
+            {
+                Pasos.Play();
+            }
+            else
+            {
+                Pasos.Pause();
+            }
+            
         }
     }
 

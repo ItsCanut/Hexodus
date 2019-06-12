@@ -46,7 +46,7 @@ public class Movimiento_Player : MonoBehaviour
     {
 
         bool shiftPulsado = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
-        bool isDashingW = Input.GetKey(KeyCode.LeftAlt);
+        bool isDashingW = Input.GetKey(KeyCode.Space);
         Vector3 movimiento = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         if (shiftPulsado)
@@ -70,13 +70,13 @@ public class Movimiento_Player : MonoBehaviour
     {
         
 
-        Saltar();
+        //Saltar();
         
 
     }
     
 
-    private void Saltar()
+    /*private void Saltar()
     {
         // salto cuando doy doy click al espacio
         if (Input.GetButtonDown("Jump"))
@@ -86,7 +86,7 @@ public class Movimiento_Player : MonoBehaviour
                 rb.AddForce(Vector3.up * jumpHeight);
             }
         }
-    }
+    }*/
 
     void OnCollisionEnter(Collision other)
     {

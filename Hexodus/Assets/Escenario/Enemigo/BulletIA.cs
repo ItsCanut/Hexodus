@@ -12,4 +12,8 @@ public class BulletIA : MonoBehaviour
         collision.transform.SendMessage("AplicarDano", daño, SendMessageOptions.DontRequireReceiver); 
         Destroy(this.gameObject);
     }
+     void Update()
+    {
+        Destroy(gameObject,0.5f); 
+    }
 }

@@ -1,6 +1,6 @@
 Win
 PlayerPath?
-D:/Documents/Proyecto Videojuegos GTI/Hexodus/Ejecutables/Presentacion/Hexodus.exe
+C:/Users/canut/Documents/Hexodus/Ejecutables/Final/Hexodus.exe
 SceneListBegin?
 Assets/Scenes/Main Menu/Main_Menu.unity
 Assets/Scenes/JUEGO/Game.unity

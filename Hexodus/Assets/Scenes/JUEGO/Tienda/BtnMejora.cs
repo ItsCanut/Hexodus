@@ -29,6 +29,7 @@ public class BtnMejora : MonoBehaviour
     private int danyo;
     private int vida;
     public double oro;     // Oro para comprar mejoras
+    public Transform jugador;
 
     public AudioSource sonidoCompra;
 
@@ -41,30 +42,31 @@ public class BtnMejora : MonoBehaviour
         velocidad = 0;
         vida = 0;
         danyo = 0;
-        oro = GetComponent<VidaP>().oro;
+        oro = 0;
         textoPuntuacion.text = oro.ToString();
 
     }
 
     private void Update()
     {
-        
+        oro = jugador.GetComponent<VidaP>().oro;
+        textoPuntuacion.text = oro.ToString();
 
         MejoraA_1.onClick.AddListener(delegate { EditarInspector(MejoraA_1.GetComponent<Mejoras>().GetNombre(), MejoraA_1.GetComponent<Mejoras>().GetDescripcion(), MejoraA_1.GetComponent<Mejoras>().GetPrecio(), MejoraA_1.GetComponent<Mejoras>().GetIndex()); });
-        MejoraA_2.onClick.AddListener(delegate { EditarInspector(MejoraA_2.GetComponent<Mejoras>().GetNombre(), MejoraA_2.GetComponent<Mejoras>().GetDescripcion(), MejoraA_2.GetComponent<Mejoras>().GetPrecio(), MejoraA_2.GetComponent<Mejoras>().GetIndex()); });
+       /* MejoraA_2.onClick.AddListener(delegate { EditarInspector(MejoraA_2.GetComponent<Mejoras>().GetNombre(), MejoraA_2.GetComponent<Mejoras>().GetDescripcion(), MejoraA_2.GetComponent<Mejoras>().GetPrecio(), MejoraA_2.GetComponent<Mejoras>().GetIndex()); });
         MejoraA_3.onClick.AddListener(delegate { EditarInspector(MejoraA_3.GetComponent<Mejoras>().GetNombre(), MejoraA_3.GetComponent<Mejoras>().GetDescripcion(), MejoraA_3.GetComponent<Mejoras>().GetPrecio(), MejoraA_3.GetComponent<Mejoras>().GetIndex()); });
-
+        */
         MejoraB_1.onClick.AddListener(delegate { EditarInspector(MejoraB_1.GetComponent<Mejoras>().GetNombre(), MejoraB_1.GetComponent<Mejoras>().GetDescripcion(), MejoraB_1.GetComponent<Mejoras>().GetPrecio(), MejoraB_1.GetComponent<Mejoras>().GetIndex()); });
-        MejoraB_2.onClick.AddListener(delegate { EditarInspector(MejoraB_2.GetComponent<Mejoras>().GetNombre(), MejoraB_2.GetComponent<Mejoras>().GetDescripcion(), MejoraB_2.GetComponent<Mejoras>().GetPrecio(), MejoraB_2.GetComponent<Mejoras>().GetIndex()); });
+      /*  MejoraB_2.onClick.AddListener(delegate { EditarInspector(MejoraB_2.GetComponent<Mejoras>().GetNombre(), MejoraB_2.GetComponent<Mejoras>().GetDescripcion(), MejoraB_2.GetComponent<Mejoras>().GetPrecio(), MejoraB_2.GetComponent<Mejoras>().GetIndex()); });
         MejoraB_3.onClick.AddListener(delegate { EditarInspector(MejoraB_3.GetComponent<Mejoras>().GetNombre(), MejoraB_3.GetComponent<Mejoras>().GetDescripcion(), MejoraB_3.GetComponent<Mejoras>().GetPrecio(), MejoraB_3.GetComponent<Mejoras>().GetIndex()); });
-
+        */
         MejoraC_1.onClick.AddListener(delegate { EditarInspector(MejoraC_1.GetComponent<Mejoras>().GetNombre(), MejoraC_1.GetComponent<Mejoras>().GetDescripcion(), MejoraC_1.GetComponent<Mejoras>().GetPrecio(), MejoraC_1.GetComponent<Mejoras>().GetIndex()); });
-        MejoraC_2.onClick.AddListener(delegate { EditarInspector(MejoraC_2.GetComponent<Mejoras>().GetNombre(), MejoraC_2.GetComponent<Mejoras>().GetDescripcion(), MejoraC_2.GetComponent<Mejoras>().GetPrecio(), MejoraC_2.GetComponent<Mejoras>().GetIndex()); });
+       /* MejoraC_2.onClick.AddListener(delegate { EditarInspector(MejoraC_2.GetComponent<Mejoras>().GetNombre(), MejoraC_2.GetComponent<Mejoras>().GetDescripcion(), MejoraC_2.GetComponent<Mejoras>().GetPrecio(), MejoraC_2.GetComponent<Mejoras>().GetIndex()); });
         MejoraC_3.onClick.AddListener(delegate { EditarInspector(MejoraC_3.GetComponent<Mejoras>().GetNombre(), MejoraC_3.GetComponent<Mejoras>().GetDescripcion(), MejoraC_3.GetComponent<Mejoras>().GetPrecio(), MejoraC_3.GetComponent<Mejoras>().GetIndex()); });
-
+        */
 
         // -------------- MEJORAS DE VELOCIDAD DE MOVIMIENTO ---------------------
-        if (velocidad.Equals(1))
+      /*  if (velocidad.Equals(1))
         {
             player.GetComponent<Movimiento_Player>().velocidad = player.GetComponent<Movimiento_Player>().velocidad + 0.1f;
             Debug.Log("VELOCIDAD AUMENTADA");
@@ -106,7 +108,7 @@ public class BtnMejora : MonoBehaviour
         {
             player.GetComponent<BulletHit>().daño = player.GetComponent<BulletHit>().daño + 10;
         }
-        
+        */
         
        
     }
@@ -118,7 +120,6 @@ public class BtnMejora : MonoBehaviour
 
         nombreInspector.text = nombre.ToString();
         descripcionInspector.text = descripcion.ToString();
-
 
 
 
@@ -152,10 +153,11 @@ public class BtnMejora : MonoBehaviour
 
     public void Comprar()
     {
-
+        
 
         if (oro - PrecioObjeto < 0)
         {
+            textoPuntuacion.text = oro.ToString();
             Debug.Log("NO HAY SUFICIENTE DINERO");
         }
         else
@@ -166,15 +168,18 @@ public class BtnMejora : MonoBehaviour
 
             if (mejoraSeleccionada == "vida")
             {
-                vida = vida + 1;
+                vida = vida + 50;
+                jugador.GetComponent<VidaP>().oro = jugador.GetComponent<VidaP>().oro - 20;
             }
             if (mejoraSeleccionada == "danyo")
             {
                 danyo = danyo + 1;
+                jugador.GetComponent<VidaP>().oro = jugador.GetComponent<VidaP>().oro - 20;
             }
             if (mejoraSeleccionada == "velocidad")
             {
                 velocidad = velocidad + 1;
+                jugador.GetComponent<VidaP>().oro = jugador.GetComponent<VidaP>().oro - 20;
             }
 
             // velocidad = velocidad + 1;

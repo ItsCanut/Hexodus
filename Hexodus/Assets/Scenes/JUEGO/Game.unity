@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -969,13 +969,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 13641bc372c76a64bace5343b17625f0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.18
+  m_Volume: 0.06
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 251
+  Priority: 150
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2171,7 +2171,7 @@ PrefabInstance:
     - target: {fileID: 2616862553854634227, guid: 6deaf046313630a4aad7c652954adbae,
         type: 3}
       propertyPath: cuantosQuieroSpawnear
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2616862553854634227, guid: 6deaf046313630a4aad7c652954adbae,
         type: 3}

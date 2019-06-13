@@ -76,6 +76,8 @@ public class VidaP : MonoBehaviour
         {
             PlayerPrefs.SetInt("Puntuacion", puntuacion);
             Debug.Log("Se ha cambiado la puntuacion");
+            string a = PlayerPrefs.GetString("JugadorActual");
+            PlayerPrefs.SetString("JugadorMaximo", a);
             PlayerPrefs.Save();
 
         }

@@ -20,7 +20,7 @@ public class MenuPrincipal : MonoBehaviour
         Debug.Log(punt);
 
         Text puntuacion = laPuntuacion.GetComponent<Text>();
-        puntuacion.text = PlayerPrefs.GetInt("Puntuacion").ToString();
+        puntuacion.text = PlayerPrefs.GetString("JugadorMaximo") + " " + PlayerPrefs.GetInt("Puntuacion").ToString();
     }
 
     // -------------------------------------------------------------------------

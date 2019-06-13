@@ -173,12 +173,12 @@ public class BtnMejora : MonoBehaviour
             }
             if (mejoraSeleccionada == "danyo")
             {
-                danyo = danyo + 1;
+                danyo = danyo + 5;
                 jugador.GetComponent<VidaP>().oro = jugador.GetComponent<VidaP>().oro - 20;
             }
             if (mejoraSeleccionada == "velocidad")
             {
-                velocidad = velocidad + 1;
+                velocidad = velocidad + 25;
                 jugador.GetComponent<VidaP>().oro = jugador.GetComponent<VidaP>().oro - 20;
             }
 

@@ -1,10 +1,9 @@
 Win
 PlayerPath?
-D:/Desktop/Hexodus final/Hexodus.exe
+D:/Documents/Proyecto Videojuegos GTI/Hexodus/Ejecutables/Presentacion/Hexodus.exe
 SceneListBegin?
 Assets/Scenes/Main Menu/Main_Menu.unity
 Assets/Scenes/JUEGO/Game.unity
-Assets/Scenes/Start.unity
 SceneListEnd?
 23d669c8bf2983ca4a3df160658318a6 Cinemachine.dll:Cinemachine.CinemachineStateDrivenCamera
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -159,7 +158,7 @@ bd543bad7f9f6262f10595aadb130d22 Cinemachine.dll:Cinemachine.CinemachineComposer
 15882a52798c275361cd0a3ada984ec5 Cinemachine.dll:Cinemachine.CinemachineDollyCart
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 204ea02909ea3f738dafe3ff633d2a93 Cinemachine.dll:Cinemachine.CinemachineTrackedDolly
-fcda821acb3528bf1fee98acc300fd5b Assembly-CSharp.dll:.Punto
+08b76d52498368f964099d3abe5490b5 Assembly-CSharp.dll:.Punto
 71bb6a6b6c8f052f948db64c7dd3ca4f Cinemachine.dll:Cinemachine.CinemachinePipeline
 61668f9790fd4b4b11aafa45ec3d1939 Assembly-CSharp.dll:.VidaHUD
 694d20920c0e41f567e119f7159a3644 Cinemachine.dll:Cinemachine.CinemachinePath

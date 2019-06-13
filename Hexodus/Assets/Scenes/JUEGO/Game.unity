@@ -2510,7 +2510,7 @@ Transform:
   - {fileID: 911395697}
   - {fileID: 299484491}
   m_Father: {fileID: 1859859609}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -90.00001, y: 180, z: 90.00001}
 --- !u!208 &306439870
 NavMeshObstacle:
@@ -3911,7 +3911,7 @@ Transform:
   - {fileID: 191253897}
   - {fileID: 530383166}
   m_Father: {fileID: 1859859609}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90.00001, y: 180, z: 90.00001}
 --- !u!208 &454104424
 NavMeshObstacle:
@@ -6705,8 +6705,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 11}
-  m_SizeDelta: {x: 191.9, y: 202.5}
+  m_AnchoredPosition: {x: 3, y: -11.5}
+  m_SizeDelta: {x: 191.9, y: 190.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813665137
 MonoBehaviour:
@@ -7680,7 +7680,7 @@ MonoBehaviour:
   laPuntuacion: {fileID: 1209980804}
   losOrbesitos: {fileID: 292562585}
   menuMuerte: {fileID: 1227113932}
-  RecVida: 1.5
+  RecVida: 3
   oro: 0
   hierro: 0
   puntuacion: 0
@@ -8005,8 +8005,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.4, y: 112.3}
-  m_SizeDelta: {x: 183.1, y: 68.9}
+  m_AnchoredPosition: {x: -1.4, y: 100.82}
+  m_SizeDelta: {x: 183.1, y: 91.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &973561020
 MonoBehaviour:
@@ -8443,7 +8443,7 @@ Transform:
   - {fileID: 153817730}
   - {fileID: 1449017219}
   m_Father: {fileID: 1859859609}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90.00001, y: 180, z: 90.00001}
 --- !u!208 &1009557491
 NavMeshObstacle:
@@ -10317,7 +10317,7 @@ Transform:
   - {fileID: 357075018}
   - {fileID: 934741454}
   m_Father: {fileID: 1859859609}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90.00001, y: 180, z: 90.00001}
 --- !u!208 &1292246472
 NavMeshObstacle:
@@ -13597,7 +13597,7 @@ Transform:
   - {fileID: 454952199}
   - {fileID: 1851173967}
   m_Father: {fileID: 1859859609}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90.00001, y: 180, z: 90.00001}
 --- !u!208 &1633593908
 NavMeshObstacle:
@@ -14382,7 +14382,7 @@ Transform:
   - {fileID: 749652105}
   - {fileID: 1481547119}
   m_Father: {fileID: 1859859609}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1821261945
 PrefabInstance:
@@ -14657,6 +14657,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hierba22 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1512137905252194267, guid: ae980719cfb5309498320afce11c6b8b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512137905252194267, guid: ae980719cfb5309498320afce11c6b8b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512137905252194267, guid: ae980719cfb5309498320afce11c6b8b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512137905252194267, guid: ae980719cfb5309498320afce11c6b8b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 52.8
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 9c2f017df983ad14899421a3c4688b5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.191
@@ -14700,26 +14720,6 @@ PrefabInstance:
     - target: {fileID: 400004, guid: 9c2f017df983ad14899421a3c4688b5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 16.845001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512137905252194267, guid: ae980719cfb5309498320afce11c6b8b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512137905252194267, guid: ae980719cfb5309498320afce11c6b8b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512137905252194267, guid: ae980719cfb5309498320afce11c6b8b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512137905252194267, guid: ae980719cfb5309498320afce11c6b8b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 52.8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1512137905252194260, guid: ae980719cfb5309498320afce11c6b8b, type: 3}
@@ -14933,6 +14933,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1012997632}
   - {fileID: 1918277073}
   - {fileID: 1292246471}
   - {fileID: 454104423}
@@ -14942,9 +14943,8 @@ Transform:
   - {fileID: 1850738600}
   - {fileID: 548549493}
   - {fileID: 1074857677}
-  - {fileID: 1817694138}
   - {fileID: 20836590}
-  - {fileID: 1012997632}
+  - {fileID: 1817694138}
   m_Father: {fileID: 654086390}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15519,7 +15519,7 @@ Transform:
   - {fileID: 913989506}
   - {fileID: 1109947854}
   m_Father: {fileID: 1859859609}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1928858685
 GameObject:
@@ -15694,6 +15694,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hierba23 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: acd11196bdf50d64c92017d0e8a994d1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: acd11196bdf50d64c92017d0e8a994d1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: acd11196bdf50d64c92017d0e8a994d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -502.61166
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: acd11196bdf50d64c92017d0e8a994d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -214.49301
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: acd11196bdf50d64c92017d0e8a994d1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.009254
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: c7f54f94c0e482f4fb551310250c0bba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31.892057
@@ -15749,26 +15769,6 @@ PrefabInstance:
     - target: {fileID: 400004, guid: c7f54f94c0e482f4fb551310250c0bba, type: 3}
       propertyPath: m_LocalScale.z
       value: 6.237257
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: acd11196bdf50d64c92017d0e8a994d1, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: acd11196bdf50d64c92017d0e8a994d1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: acd11196bdf50d64c92017d0e8a994d1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -502.61166
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: acd11196bdf50d64c92017d0e8a994d1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -214.49301
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: acd11196bdf50d64c92017d0e8a994d1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 17.009254
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd11196bdf50d64c92017d0e8a994d1, type: 3}
@@ -15916,9 +15916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495f825e979d2374a8cbc286ea04a1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreMejora: "Mejora de Da\xF1o"
-  descripcionMejora: "Adquiere m\xE1s da\xF1o para tus balas y acaba con todos los
-    enemigos."
+  nombreMejora: "Mejora de Regeneraci\xF3n de Vida"
+  descripcionMejora: "Aumenta tu Regeneraci\xF3n de vida fuera de combate."
   precioMejora: 500
   index: 1
 --- !u!1001 &1931298449

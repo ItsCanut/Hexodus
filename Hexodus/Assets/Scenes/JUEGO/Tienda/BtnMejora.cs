@@ -168,18 +168,21 @@ public class BtnMejora : MonoBehaviour
 
             if (mejoraSeleccionada == "vida")
             {
-                vida = vida + 50;
-                jugador.GetComponent<VidaP>().oro = jugador.GetComponent<VidaP>().oro - 20;
+                // vida = vida + 1;
+                player.GetComponent<VidaP>().vida = player.GetComponent<VidaP>().vida + 25;
+                jugador.GetComponent<VidaP>().oro = jugador.GetComponent<VidaP>().oro - 500;
             }
             if (mejoraSeleccionada == "danyo")
             {
-                danyo = danyo + 5;
-                jugador.GetComponent<VidaP>().oro = jugador.GetComponent<VidaP>().oro - 20;
+                // danyo = danyo + 1;
+                player.GetComponent<BulletHit>().daño = player.GetComponent<BulletHit>().daño + 25;
+                jugador.GetComponent<VidaP>().oro = jugador.GetComponent<VidaP>().oro - 500;
             }
             if (mejoraSeleccionada == "velocidad")
             {
-                velocidad = velocidad + 25;
-                jugador.GetComponent<VidaP>().oro = jugador.GetComponent<VidaP>().oro - 20;
+               // velocidad = velocidad + 1;
+                jugador.GetComponent<Movimiento_Player>().velocidad = jugador.GetComponent<Movimiento_Player>().velocidad + 25;
+                jugador.GetComponent<VidaP>().oro = jugador.GetComponent<VidaP>().oro - 500;
             }
 
             // velocidad = velocidad + 1;

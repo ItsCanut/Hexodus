@@ -181,7 +181,7 @@ public class BtnMejora : MonoBehaviour
             if (mejoraSeleccionada == "velocidad")
             {
                // velocidad = velocidad + 1;
-                jugador.GetComponent<Movimiento_Player>().velocidad = jugador.GetComponent<Movimiento_Player>().velocidad + 25;
+                jugador.GetComponent<Movimiento_Player>().velocidad = jugador.GetComponent<Movimiento_Player>().velocidad + 8;
                 jugador.GetComponent<VidaP>().oro = jugador.GetComponent<VidaP>().oro - 500;
             }
 

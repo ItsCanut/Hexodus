@@ -12,7 +12,8 @@ public class Punto : MonoBehaviour
     public GameObject VidaCast;
     public GameObject Ayuda;
     Image image;
-    
+    public GameObject menuMuerte;
+
     public Sprite cas1;
     public Sprite cas2;
     public Sprite cas3;
@@ -77,10 +78,15 @@ public class Punto : MonoBehaviour
         if (VidaTorre <= 0f)
         {
 
-            Ayuda.SetActive(false);
+            
             Debug.Log("--VidaTorre al 0%--");
             image.sprite = cas4;
-            SceneManager.LoadScene("start");
+           
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0f;
+            menuMuerte.gameObject.SetActive(true);
+
         }
 
         

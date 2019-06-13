@@ -58,7 +58,7 @@ public class VidaP : MonoBehaviour
 
     void Update()
     {
-
+        
 
         if (Time.time > tiempo)
         {

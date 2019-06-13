@@ -18,6 +18,8 @@ public class MenuPausa : MonoBehaviour
 
     public Camera_Control cameraControl;
 
+    public double dinero;
+
     private bool tiendaAbierta;
 
     void Start()
@@ -142,6 +144,7 @@ public class MenuPausa : MonoBehaviour
         menuPausa.gameObject.SetActive(false);
         menuGameOver.gameObject.SetActive(false);
         personaje.GetComponent<Camera_Control>().enabled = false;
+        dinero = GetComponent<VidaP>().oro;
 
     }
 

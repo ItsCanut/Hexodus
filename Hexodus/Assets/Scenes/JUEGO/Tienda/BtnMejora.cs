@@ -41,14 +41,14 @@ public class BtnMejora : MonoBehaviour
         velocidad = 0;
         vida = 0;
         danyo = 0;
-        oro = 45;
+        oro = GetComponent<VidaP>().oro;
         textoPuntuacion.text = oro.ToString();
 
     }
 
     private void Update()
     {
-
+        
 
         MejoraA_1.onClick.AddListener(delegate { EditarInspector(MejoraA_1.GetComponent<Mejoras>().GetNombre(), MejoraA_1.GetComponent<Mejoras>().GetDescripcion(), MejoraA_1.GetComponent<Mejoras>().GetPrecio(), MejoraA_1.GetComponent<Mejoras>().GetIndex()); });
         MejoraA_2.onClick.AddListener(delegate { EditarInspector(MejoraA_2.GetComponent<Mejoras>().GetNombre(), MejoraA_2.GetComponent<Mejoras>().GetDescripcion(), MejoraA_2.GetComponent<Mejoras>().GetPrecio(), MejoraA_2.GetComponent<Mejoras>().GetIndex()); });
@@ -106,9 +106,9 @@ public class BtnMejora : MonoBehaviour
         {
             player.GetComponent<BulletHit>().daño = player.GetComponent<BulletHit>().daño + 10;
         }
-
-        oro = GetComponent<VidaP>().oro;
-        textoPuntuacion.text = oro.ToString();
+        
+        
+       
     }
 
 

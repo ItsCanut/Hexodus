@@ -80,6 +80,8 @@ public class VidaP : MonoBehaviour
 
         }
 
+        
+
     }
 
     public void ContarOrbes( int _orbes)
